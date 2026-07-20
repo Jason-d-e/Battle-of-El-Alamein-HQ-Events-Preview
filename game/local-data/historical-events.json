@@ -1,0 +1,436 @@
+{
+  "schemaVersion": 1,
+  "headquarters": {
+    "axis": {
+      "commander": {
+        "name": {
+          "zh": "埃尔温·隆美尔",
+          "en": "Erwin Rommel"
+        },
+        "role": {
+          "zh": "装甲集团军司令部",
+          "en": "Panzer Army Headquarters"
+        },
+        "portrait": "./local-assets/photos/rommel-portrait-1942.jpg?v=947ab7ad34ec8de82a35f78d806e2fc1d6d6ac07",
+        "portraitAlt": {
+          "zh": "1942至1943年前后的埃尔温·隆美尔档案肖像",
+          "en": "Archive portrait of Erwin Rommel, circa 1942–43"
+        },
+        "portraitLicense": {
+          "status": "verified",
+          "name": "CC BY-SA 3.0 DE",
+          "url": "https://creativecommons.org/licenses/by-sa/3.0/de/",
+          "attribution": "Bundesarchiv, Bild 146-1973-012-43 / Unknown",
+          "modifications": {
+            "zh": "界面使用裁切与色调滤镜；原始文件未修改。",
+            "en": "Cropped and tone-filtered in the interface; the source file is unchanged."
+          }
+        }
+      },
+      "emptyState": {
+        "zh": "当前没有已解锁的总部材料。",
+        "en": "No headquarters material is unlocked yet."
+      }
+    },
+    "allied": {
+      "commander": {
+        "name": {
+          "zh": "伯纳德·蒙哥马利",
+          "en": "Bernard Montgomery"
+        },
+        "role": {
+          "zh": "英国第八集团军司令部",
+          "en": "Eighth Army Headquarters"
+        },
+        "portrait": "./local-assets/photos/montgomery-1942.jpg?v=947ab7ad34ec8de82a35f78d806e2fc1d6d6ac07",
+        "portraitAlt": {
+          "zh": "1942年北非战场上的伯纳德·蒙哥马利",
+          "en": "Bernard Montgomery in North Africa, 1942"
+        },
+        "portraitLicense": {
+          "status": "verified",
+          "name": "Public domain",
+          "url": "https://creativecommons.org/publicdomain/mark/1.0/",
+          "attribution": "U.S. National Archives",
+          "modifications": {
+            "zh": "界面使用裁切与色调滤镜；原始文件未修改。",
+            "en": "Cropped and tone-filtered in the interface; the source file is unchanged."
+          }
+        }
+      },
+      "emptyState": {
+        "zh": "英军总部档案将在后续内容中开放。",
+        "en": "British headquarters records will open in a later content set."
+      }
+    }
+  },
+  "entries": [
+    {
+      "id": "axis-turn-1-background",
+      "surface": "turn-briefing",
+      "side": "axis",
+      "impact": "flavor",
+      "unlock": {
+        "turn": 1,
+        "timing": "turn-start"
+      },
+      "content": {
+        "zh": {
+          "title": "背景",
+          "eyebrow": "1942年8月31日 · 晨间战情简报",
+          "body": "轴心军的物资状况已经接近极限。8月初，约35%的车辆正在维修；运输车辆中约85%为缴获的英国或美国车型，统一零件严重不足。约2,000辆卡车和近100门火炮仍滞留在意大利，另有大量车辆和坦克尚在德国。英军则更接近亚历山大、开罗和苏伊士的补给基地。9月1日的一段交战中，罗梅尔记述英军约以十发炮弹回应轴心军一发。"
+        },
+        "en": {
+          "title": "Background",
+          "eyebrow": "31 August 1942 · Morning situation briefing",
+          "body": "Axis logistics were near their limit. In early August, about 35 percent of vehicles were under repair; roughly 85 percent of the transport fleet consisted of captured British or American types, making standard spares scarce. About 2,000 lorries and almost 100 guns remained in Italy, while many vehicles and tanks were still in Germany. The British were far closer to the supply bases at Alexandria, Cairo and Suez. During one action on 1 September, Rommel recorded roughly ten British shells answering every Axis shell."
+        }
+      },
+      "choices": [
+        {
+          "id": "axis-still-win",
+          "label": {
+            "zh": "我们依然能赢！",
+            "en": "We can still win!"
+          },
+          "effects": [
+            {
+              "type": "none"
+            }
+          ]
+        }
+      ],
+      "media": [
+        {
+          "src": "./local-assets/photos/axis-field-workshop-1941.jpg?v=947ab7ad34ec8de82a35f78d806e2fc1d6d6ac07",
+          "historicalFit": "representative",
+          "alt": {
+            "zh": "在利比亚被俘并摧毁后的德军野战维修场与车辆",
+            "en": "A German field workshop and vehicles captured and destroyed by British forces in Libya"
+          },
+          "caption": {
+            "zh": "代表性档案照片：1941年11月，利比亚一处被英军俘获并随后由盟军摧毁的德军野战维修场；并非1942年8月31日当天现场。",
+            "en": "Representative archive photograph: a German field workshop captured by British troops and subsequently destroyed by Allied forces in Libya, November 1941; not the scene of 31 August 1942."
+          },
+          "license": {
+            "status": "verified",
+            "name": "Public domain",
+            "url": "https://creativecommons.org/publicdomain/mark/1.0/",
+            "attribution": "Australian War Memorial 011009 / George Silk"
+          },
+          "modifications": {
+            "zh": "界面使用裁切、缩放与色调滤镜；原始文件未修改。",
+            "en": "Cropped, scaled and tone-filtered in the interface; the source file is unchanged."
+          }
+        }
+      ],
+      "source": {
+        "url": "https://www.raf.mod.uk/what-we-do/our-history/air-historical-branch/second-world-war-campaign-narratives/middle-east-campaigns-volume-iv-operations-in-libya-the-western-desert-and-tunisia-july-1942-may-1943/",
+        "citation": {
+          "zh": "英国皇家空军空战史处《中东战役》第四卷；相关数字亦见《隆美尔战时文件》。十比一仅指隆美尔对9月1日一段交战的记述，并非整个战区的恒定比例。",
+          "en": "RAF Air Historical Branch, Middle East Campaigns, Volume IV; figures also reproduced from The Rommel Papers. The ten-to-one comparison is limited to Rommel's account of an action on 1 September, not presented as a theater-wide constant."
+        }
+      }
+    },
+    {
+      "id": "axis-turn-1-neurath-report",
+      "surface": "headquarters",
+      "section": "events",
+      "side": "axis",
+      "impact": "flavor",
+      "unlock": {
+        "turn": 1,
+        "timing": "turn-start"
+      },
+      "content": {
+        "zh": {
+          "title": "来自最高统帅部的口信",
+          "eyebrow": "司令部报告 · 1942年8月",
+          "body": "纽拉特见到了元首。元首向装甲集团军致意，并已获知罗梅尔对油料、兵力和战局的忧虑。"
+        },
+        "en": {
+          "title": "Message from Führer Headquarters",
+          "eyebrow": "Headquarters report · August 1942",
+          "body": "Neurath met the Führer. Hitler sent his greetings to the Panzer Army and had been told of Rommel's concerns about fuel, manpower and the military situation."
+        }
+      },
+      "source": {
+        "url": "https://archive.org/details/rommelpapers0000lidd",
+        "citation": {
+          "zh": "《隆美尔战时文件》。文字仅保留已出版叙述支持的部分；未获支持的“最高统帅部期待进攻成功”说法已删去。",
+          "en": "The Rommel Papers. Wording is deliberately limited to the parts supported by the published account; the unsupported claim that OKW expected a successful offensive is omitted."
+        }
+      }
+    },
+    {
+      "id": "axis-turn-1-letter-to-lu",
+      "surface": "headquarters",
+      "section": "letters",
+      "side": "axis",
+      "impact": "flavor",
+      "unlock": {
+        "turn": 1,
+        "timing": "turn-start"
+      },
+      "content": {
+        "zh": {
+          "title": "给露西的信",
+          "eyebrow": "此前来信 · 1942年7月17日",
+          "body": "“亲爱的露，目前我的处境糟透了——至少从军事上看是如此……真叫人忍不住落泪。”"
+        },
+        "en": {
+          "title": "Letter to Lu",
+          "eyebrow": "Earlier letter · 17 July 1942",
+          "body": "“Dearest Lu, Things are going downright badly for me at the moment, at any rate, in the military sense. … It’s enough to make one weep.”"
+        }
+      },
+      "document": {
+        "kind": "letter",
+        "date": "1942-07-17",
+        "timelineLabel": {
+          "zh": "此前来信",
+          "en": "Earlier letter"
+        },
+        "originalLanguage": "de",
+        "originalTextVerified": false,
+        "translationBasis": {
+          "zh": "据已出版英译本转译",
+          "en": "Published English translation; German wording not yet verified"
+        }
+      },
+      "source": {
+        "url": "https://archive.org/details/rommelpapers0000lidd",
+        "citation": {
+          "zh": "《隆美尔战时文件》，1942年7月17日致露西·隆美尔的信。英文摘录采用已出版英译；在德文原文核实前，中文明确标为据该英译转译。",
+          "en": "The Rommel Papers, letter to Lucie Rommel dated 17 July 1942. The English excerpt is the published translation. The Chinese text is explicitly marked as translated from that English edition until the German original is verified."
+        }
+      }
+    },
+    {
+      "id": "axis-turn-2-command-losses",
+      "surface": "headquarters",
+      "section": "events",
+      "side": "axis",
+      "impact": "flavor",
+      "unlock": {
+        "turn": 2,
+        "timing": "turn-start"
+      },
+      "content": {
+        "zh": {
+          "title": "指挥层遭受损失",
+          "eyebrow": "战损报告 · 1942年8月31日",
+          "body": "第21装甲师师长格奥尔格·冯·俾斯麦阵亡，非洲军军长瓦尔特·内林负伤。指挥计划受到严重破坏，弗里茨·拜尔莱因接掌非洲军。"
+        },
+        "en": {
+          "title": "Losses in the command chain",
+          "eyebrow": "Casualty report · 31 August 1942",
+          "body": "Georg von Bismarck, commander of the 21st Panzer Division, was killed, while Afrika Korps commander Walther Nehring was wounded. The command plan was badly disrupted and Fritz Bayerlein assumed command of the corps."
+        }
+      },
+      "media": [
+        {
+          "src": "./local-assets/photos/rommel-bismarck-1942.jpg?v=947ab7ad34ec8de82a35f78d806e2fc1d6d6ac07",
+          "caption": {
+            "zh": "隆美尔与格奥尔格·冯·俾斯麦，1942年6月。红叉为界面叠加标记。",
+            "en": "Rommel and Georg von Bismarck, June 1942. The red cross is a UI overlay."
+          },
+          "alt": {
+            "zh": "隆美尔与格奥尔格·冯·俾斯麦的档案照片；界面红叉表示俾斯麦阵亡",
+            "en": "Archive photograph of Rommel and Georg von Bismarck; a UI red cross marks Bismarck as killed"
+          },
+          "subject": "Georg von Bismarck",
+          "overlay": "killed",
+          "license": {
+            "status": "verified",
+            "name": "CC BY-SA 3.0 DE",
+            "url": "https://creativecommons.org/licenses/by-sa/3.0/de/",
+            "attribution": "Bundesarchiv, Bild 101I-784-0232-37A / Otto"
+          },
+          "modifications": {
+            "zh": "界面使用裁切、缩放与色调滤镜，并叠加红叉；原始文件未修改。",
+            "en": "Cropped, scaled and tone-filtered with a red-cross UI overlay; the source file is unchanged."
+          }
+        },
+        {
+          "src": "./local-assets/photos/rommel-nehring-1942.jpg?v=947ab7ad34ec8de82a35f78d806e2fc1d6d6ac07",
+          "caption": {
+            "zh": "拜尔莱因、隆美尔与瓦尔特·内林，1942年4月。红叉为界面叠加标记。",
+            "en": "Bayerlein, Rommel and Walther Nehring, April 1942. The red cross is a UI overlay."
+          },
+          "alt": {
+            "zh": "拜尔莱因、隆美尔与瓦尔特·内林的档案照片；界面红叉表示内林负伤",
+            "en": "Archive photograph of Bayerlein, Rommel and Walther Nehring; a UI red cross marks Nehring as wounded"
+          },
+          "subject": "Walther Nehring",
+          "overlay": "wounded",
+          "license": {
+            "status": "verified",
+            "name": "CC BY-SA 3.0 DE",
+            "url": "https://creativecommons.org/licenses/by-sa/3.0/de/",
+            "attribution": "Bundesarchiv, Bild 101I-784-0203-14A / Moosmüller"
+          },
+          "modifications": {
+            "zh": "界面使用裁切、缩放与色调滤镜，并叠加红叉；原始文件未修改。",
+            "en": "Cropped, scaled and tone-filtered with a red-cross UI overlay; the source file is unchanged."
+          }
+        }
+      ],
+      "source": {
+        "url": "https://www.armyupress.army.mil/Portals/7/combat-studies-institute/csi-books/AlamHalfa_Hart.pdf",
+        "citation": {
+          "zh": "Russell A. Hart《Alam Halfa: A Retrospective》，美国陆军战斗研究所，含拜尔莱因的叙述。",
+          "en": "Russell A. Hart, Alam Halfa: A Retrospective, U.S. Army Combat Studies Institute, including Bayerlein's account."
+        }
+      }
+    },
+    {
+      "id": "axis-turn-3-fuel-and-air-raids",
+      "surface": "headquarters",
+      "section": "events",
+      "side": "axis",
+      "impact": "flavor",
+      "unlock": {
+        "turn": 3,
+        "timing": "turn-start"
+      },
+      "content": {
+        "zh": {
+          "title": "燃油没有抵达",
+          "eyebrow": "夜间态势报告 · 1942年9月1日",
+          "body": "承诺的油料车仍未出现。撤退所需燃油被集中调拨，车辆在照明弹下暴露于持续空袭；密集的车队成为轰炸机最容易辨认的目标，许多车辆燃烧或被毁。"
+        },
+        "en": {
+          "title": "The fuel has not arrived",
+          "eyebrow": "Night situation report · 1 September 1942",
+          "body": "The promised fuel lorries still did not appear. Fuel had to be concentrated for the withdrawal, while vehicles were exposed under flares to repeated air attack; the packed columns made easy targets and many vehicles burned or were destroyed."
+        }
+      },
+      "media": [
+        {
+          "src": "./local-assets/photos/axis-wrecked-lorry-1942.jpg?v=947ab7ad34ec8de82a35f78d806e2fc1d6d6ac07",
+          "historicalFit": "representative",
+          "alt": {
+            "zh": "西部沙漠中被英国皇家空军炸毁的德军卡车",
+            "en": "A German lorry destroyed by an RAF bomb in the Western Desert"
+          },
+          "caption": {
+            "zh": "代表性档案照片：约1942年，西部沙漠中一辆被250磅炸弹摧毁的德军 Opel Blitz；并非已确认的同一支拥堵车队。",
+            "en": "Representative archive photograph: a German Opel Blitz destroyed by a 250 lb bomb in the Western Desert, c. 1942; not verified as the same packed convoy."
+          },
+          "license": {
+            "status": "verified",
+            "name": "Public domain",
+            "url": "https://creativecommons.org/publicdomain/mark/1.0/",
+            "attribution": "Australian War Memorial MED0175"
+          },
+          "modifications": {
+            "zh": "界面使用裁切、缩放与色调滤镜；原始文件未修改。",
+            "en": "Cropped, scaled and tone-filtered in the interface; the source file is unchanged."
+          }
+        }
+      ],
+      "source": {
+        "url": "https://www.armyupress.army.mil/Portals/7/combat-studies-institute/csi-books/AlamHalfa_Hart.pdf",
+        "citation": {
+          "zh": "Russell A. Hart《Alam Halfa: A Retrospective》。关于车组从受损坦克抽取燃料的未获支持细节已删去。",
+          "en": "Russell A. Hart, Alam Halfa: A Retrospective. Unsupported details about crews siphoning damaged tanks have been omitted."
+        }
+      }
+    },
+    {
+      "id": "axis-turn-4-waiting-on-the-ridge",
+      "surface": "headquarters",
+      "section": "events",
+      "side": "axis",
+      "impact": "flavor",
+      "unlock": {
+        "turn": 4,
+        "timing": "turn-start"
+      },
+      "content": {
+        "zh": {
+          "title": "山脊没有动静",
+          "eyebrow": "司令部观察报告 · 1942年9月1日",
+          "body": "德军等待英国坦克离开山脊。观察哨只能看见远处炮口闪光和少量侦察车辆，英军装甲主力仍保持集结。燃料储备继续下降，任何一次迂回都可能让坦克失去返回阵地的燃料。"
+        },
+        "en": {
+          "title": "No movement from the ridge",
+          "eyebrow": "Headquarters observation report · 1 September 1942",
+          "body": "The Germans waited for the British tanks to leave the ridge. Observation posts saw only distant muzzle flashes and a few reconnaissance vehicles; the main British armoured force remained concentrated. Fuel reserves continued to fall, and another wide manoeuvre could leave the panzers without enough fuel to return."
+        }
+      },
+      "media": [
+        {
+          "src": "./local-assets/photos/panzer-iii-north-africa-1942.jpg?v=947ab7ad34ec8de82a35f78d806e2fc1d6d6ac07",
+          "historicalFit": "representative",
+          "alt": {
+            "zh": "1942年6月北非沙漠中的德军三号坦克322号",
+            "en": "German Panzer III number 322 in the North African desert, June 1942"
+          },
+          "caption": {
+            "zh": "代表性档案照片：1942年6月，北非沙漠中的三号坦克322号；并非已确认的阿拉姆哈勒法当日现场。",
+            "en": "Representative archive photograph: Panzer III number 322 in North Africa, June 1942; not verified as the Alam Halfa scene described."
+          },
+          "license": {
+            "status": "verified",
+            "name": "CC BY-SA 3.0 DE",
+            "url": "https://creativecommons.org/licenses/by-sa/3.0/de/",
+            "attribution": "Bundesarchiv, Bild 101I-785-0293-45 / Tannenberg"
+          },
+          "modifications": {
+            "zh": "界面使用裁切、缩放与色调滤镜；原始文件未修改。",
+            "en": "Cropped, scaled and tone-filtered in the interface; the source file is unchanged."
+          }
+        }
+      ],
+      "source": {
+        "url": "https://www.armyupress.army.mil/Portals/7/combat-studies-institute/csi-books/AlamHalfa_Hart.pdf",
+        "citation": {
+          "zh": "Russell A. Hart《Alam Halfa: A Retrospective》，关于第八集团军拒绝离开既设阵地以及轴心军燃料限制的叙述。",
+          "en": "Russell A. Hart, Alam Halfa: A Retrospective, on the Eighth Army's refusal to leave prepared positions and Axis fuel constraints."
+        }
+      }
+    },
+    {
+      "id": "axis-turn-4-field-remark",
+      "surface": "headquarters",
+      "section": "events",
+      "side": "axis",
+      "impact": "flavor",
+      "unlock": {
+        "turn": 4,
+        "timing": "turn-start"
+      },
+      "content": {
+        "zh": {
+          "title": "战地谈话",
+          "eyebrow": "罗梅尔对凯塞林 · 1942年9月1日",
+          "body": "“那混蛋就是不进攻。”"
+        },
+        "en": {
+          "title": "Field remark",
+          "eyebrow": "Rommel to Kesselring · 1 September 1942",
+          "body": "“The swine isn’t attacking.”"
+        }
+      },
+      "document": {
+        "kind": "field-remark",
+        "date": "1942-09-01",
+        "originalLanguage": "de",
+        "originalTextVerified": false,
+        "translationBasis": {
+          "zh": "据官方战史所引英文转译",
+          "en": "English wording quoted in the official history"
+        }
+      },
+      "source": {
+        "url": "https://22battalion.org.nz/publications/histories/alamein.pdf",
+        "citation": {
+          "zh": "Ronald Walker《Alam Halfa and Alamein》，新西兰官方战史，引德国档案 GMDS 79009/79002。此句为战地谈话，不是信件。",
+          "en": "Ronald Walker, Alam Halfa and Alamein, New Zealand official history, citing German records GMDS 79009/79002. This is a spoken remark, not a letter."
+        }
+      }
+    }
+  ]
+}
