@@ -5,6 +5,25 @@ const HEADQUARTERS_SECTIONS = ["events", "letters"];
 const SUPPORTED_LANGUAGES = ["zh", "en"];
 const SUPPORTED_EFFECTS = new Set(["none", "set-game-flag"]);
 const SUPPORTED_IMPACTS = new Set(["flavor", "gameplay"]);
+const SUPPORTED_DISPLAY_POLICIES = new Set(["hidden", "image_only"]);
+const LOCALIZED_VALUE_FIELDS = new Set(SUPPORTED_LANGUAGES);
+const RUNTIME_MEDIA_FIELDS = new Set([
+  "assetId",
+  "src",
+  "altText",
+  "displayPolicy",
+  "requiredCredit",
+  "overlay",
+  "subject",
+]);
+const RUNTIME_CREDIT_FIELDS = new Set([
+  "status",
+  "attribution",
+  "rights",
+  "rightsUrl",
+  "sourceUrl",
+  "modifications",
+]);
 
 function cloneJson(value) {
   return JSON.parse(JSON.stringify(value));
@@ -28,6 +47,72 @@ function assertLocalizedText(value, label) {
       throw new Error(`${label}.${language}.body must be a non-empty string`);
     }
   }
+}
+
+function assertRuntimeFields(value, allowedFields, label) {
+  if (!value || typeof value !== "object" || Array.isArray(value)) {
+    throw new Error(`${label} must be an object`);
+  }
+  for (const field of Object.keys(value)) {
+    if (!allowedFields.has(field)) {
+      throw new Error(`${label} contains an unsupported runtime field`);
+    }
+  }
+}
+
+function assertLocalizedValue(value, label) {
+  assertRuntimeFields(value, LOCALIZED_VALUE_FIELDS, label);
+  for (const language of SUPPORTED_LANGUAGES) {
+    if (typeof value?.[language] !== "string" || !value[language].trim()) {
+      throw new Error(`${label} is missing ${language} localization`);
+    }
+  }
+}
+
+function assertMedia(media, entryId, mediaByAssetId) {
+  if (!media || typeof media !== "object" || Array.isArray(media)) {
+    throw new Error(`Entry ${entryId} contains invalid media`);
+  }
+  assertRuntimeFields(media, RUNTIME_MEDIA_FIELDS, `Entry ${entryId} media`);
+  if (typeof media.assetId !== "string" || !/^IMG-[A-Z0-9-]+$/.test(media.assetId)) {
+    throw new Error(`Entry ${entryId} media needs a stable assetId`);
+  }
+  if (typeof media.src !== "string" || !media.src.startsWith("./local-assets/")) {
+    throw new Error(`Entry ${entryId} media ${media.assetId} needs a local source path`);
+  }
+  const previousSrc = mediaByAssetId.get(media.assetId);
+  if (previousSrc && previousSrc !== media.src) {
+    throw new Error(`Media assetId ${media.assetId} has conflicting source paths`);
+  }
+  mediaByAssetId.set(media.assetId, media.src);
+
+  if (!SUPPORTED_DISPLAY_POLICIES.has(media.displayPolicy)) {
+    throw new Error(`Entry ${entryId} media ${media.assetId} has unsupported displayPolicy ${media.displayPolicy}`);
+  }
+  assertLocalizedValue(media.altText, `Entry ${entryId} media ${media.assetId} altText`);
+  const requiredCredit = media.requiredCredit;
+  if (!requiredCredit || requiredCredit.status !== "verified") {
+    throw new Error(`Entry ${entryId} media ${media.assetId} requiredCredit must be verified`);
+  }
+  assertRuntimeFields(
+    requiredCredit,
+    RUNTIME_CREDIT_FIELDS,
+    `Entry ${entryId} media ${media.assetId} requiredCredit`,
+  );
+  for (const field of ["rights", "attribution"]) {
+    if (typeof requiredCredit[field] !== "string" || !requiredCredit[field].trim()) {
+      throw new Error(`Entry ${entryId} media ${media.assetId} requiredCredit needs ${field}`);
+    }
+  }
+  for (const field of ["rightsUrl", "sourceUrl"]) {
+    if (typeof requiredCredit[field] !== "string" || !requiredCredit[field].startsWith("https://")) {
+      throw new Error(`Entry ${entryId} media ${media.assetId} requiredCredit needs an HTTPS ${field}`);
+    }
+  }
+  assertLocalizedValue(
+    requiredCredit.modifications,
+    `Entry ${entryId} media ${media.assetId} requiredCredit modifications`,
+  );
 }
 
 function assertChoice(choice, entryId, seenChoiceIds) {
@@ -67,6 +152,7 @@ function validateCatalog(catalog) {
   }
 
   const entryIds = new Set();
+  const mediaByAssetId = new Map();
   for (const entry of catalog.entries) {
     if (!entry || typeof entry.id !== "string" || !entry.id) {
       throw new Error("Historical narrative entry is missing an id");
@@ -92,6 +178,7 @@ function validateCatalog(catalog) {
       throw new Error(`Entry ${entry.id} flagsAll must be an array`);
     }
     assertLocalizedText(entry.content, `Entry ${entry.id}`);
+    for (const media of entry.media ?? []) assertMedia(media, entry.id, mediaByAssetId);
 
     if (entry.surface === "headquarters") {
       if (!HEADQUARTERS_SECTIONS.includes(entry.section)) {

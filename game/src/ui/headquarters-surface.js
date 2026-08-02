@@ -39,25 +39,6 @@ function isElementWithin(element, ancestor) {
   return false;
 }
 
-function renderLicense(documentRef, container, model, classPrefix) {
-  const credit = String(model?.credit || "").trim();
-  const licenseName = String(model?.licenseName || "").trim();
-  const licenseUrl = String(model?.licenseUrl || "").trim();
-  const modifications = String(model?.modifications || "").trim();
-  const children = [];
-  if (credit) children.push(makeElement(documentRef, "span", `${classPrefix}-attribution`, credit));
-  if (licenseName && licenseUrl) {
-    const link = makeElement(documentRef, "a", `${classPrefix}-license-link`, licenseName);
-    link.setAttribute("href", licenseUrl);
-    link.setAttribute("target", "_blank");
-    link.setAttribute("rel", "noopener noreferrer");
-    children.push(link);
-  }
-  if (modifications) children.push(makeElement(documentRef, "span", `${classPrefix}-modifications`, modifications));
-  container.replaceChildren(...children);
-  container.hidden = children.length === 0;
-}
-
 export function createHeadquartersSurface({
   root,
   onCommand,
@@ -100,8 +81,7 @@ export function createHeadquartersSurface({
   heading.id = `${instanceId}-title`;
   heading.setAttribute("tabindex", "-1");
   const commanderTitle = makeElement(documentRef, "p", "headquarters-commander-title");
-  const commanderCredit = makeElement(documentRef, "p", "headquarters-commander-credit");
-  identity.append(heading, commanderTitle, commanderCredit);
+  identity.append(heading, commanderTitle);
   const closeButton = makeElement(documentRef, "button", "headquarters-close");
   closeButton.type = "button";
   header.append(commanderPortrait, identity, closeButton);
@@ -210,12 +190,6 @@ export function createHeadquartersSurface({
     commanderPortrait.alt = side.commander?.portraitAlt || "";
     heading.textContent = side.commander?.name || side.label || "";
     commanderTitle.textContent = side.commander?.title || "";
-    renderLicense(documentRef, commanderCredit, {
-      credit: side.commander?.portraitCredit,
-      licenseName: side.commander?.portraitLicenseName,
-      licenseUrl: side.commander?.portraitLicenseUrl,
-      modifications: side.commander?.portraitModifications,
-    }, "headquarters-commander");
     closeButton.textContent = "×";
     closeButton.setAttribute("aria-label", model.labels.close || "Close");
     tabs.setAttribute("aria-label", side.label || model.labels.surface || "Headquarters");
@@ -402,33 +376,7 @@ export function createHeadquartersSurface({
       image.src = imageModel.src;
       image.alt = imageModel.alt || "";
       figure.append(image);
-      appendOptionalText(figure, "headquarters-document-caption", imageModel.caption, "figcaption");
-      const mediaCredit = makeElement(documentRef, "p", "headquarters-document-media-credit");
-      renderLicense(documentRef, mediaCredit, imageModel, "headquarters-document");
-      figure.append(mediaCredit);
       article.append(figure);
-    }
-
-    appendOptionalText(article, "headquarters-document-impact", entry.impactText);
-    appendOptionalText(article, "headquarters-document-translation", entry.translationNote);
-    if (entry.sourceNote || entry.sourceUrl) {
-      const source = makeElement(documentRef, "p", "headquarters-document-source");
-      if (entry.sourceNote) {
-        source.append(makeElement(documentRef, "span", "headquarters-document-source-note", entry.sourceNote));
-      }
-      if (entry.sourceUrl) {
-        const sourceLink = makeElement(
-          documentRef,
-          "a",
-          "headquarters-document-source-link",
-          model.labels.sourceLink || "Open source",
-        );
-        sourceLink.setAttribute("href", entry.sourceUrl);
-        sourceLink.setAttribute("target", "_blank");
-        sourceLink.setAttribute("rel", "noopener noreferrer");
-        source.append(sourceLink);
-      }
-      article.append(source);
     }
 
     const backButton = makeElement(

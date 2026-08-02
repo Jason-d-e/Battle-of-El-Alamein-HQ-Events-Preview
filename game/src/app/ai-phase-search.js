@@ -10,8 +10,8 @@ import {
   movementAllowance,
   neighborsOf,
   unitById,
-} from "../core/index.js?v=947ab7ad34ec8de82a35f78d806e2fc1d6d6ac07";
-import { combatEliminationProfile } from "./ai-tactics.js?v=947ab7ad34ec8de82a35f78d806e2fc1d6d6ac07";
+} from "../core/index.js?v=53092a12fd0c301fab72fccb751a3f3ddda2a54b";
+import { combatEliminationProfile } from "./ai-tactics.js?v=53092a12fd0c301fab72fccb751a3f3ddda2a54b";
 
 const DEFAULT_BEAM_WIDTH = 20;
 const DEFAULT_CANDIDATE_LIMIT = 36;

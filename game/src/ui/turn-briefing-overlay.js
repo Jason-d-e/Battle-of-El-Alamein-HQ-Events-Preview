@@ -16,25 +16,6 @@ function briefingEntryId(model) {
   return String(model?.entryId ?? model?.id ?? "").trim();
 }
 
-function renderImageCredit(documentRef, container, imageModel) {
-  const children = [];
-  if (imageModel?.credit) {
-    children.push(makeElement(documentRef, "span", "turn-briefing-overlay__attribution", String(imageModel.credit)));
-  }
-  if (imageModel?.licenseName && imageModel?.licenseUrl) {
-    const link = makeElement(documentRef, "a", "turn-briefing-overlay__license-link", String(imageModel.licenseName));
-    link.setAttribute("href", String(imageModel.licenseUrl));
-    link.setAttribute("target", "_blank");
-    link.setAttribute("rel", "noopener noreferrer");
-    children.push(link);
-  }
-  if (imageModel?.modifications) {
-    children.push(makeElement(documentRef, "span", "turn-briefing-overlay__modifications", String(imageModel.modifications)));
-  }
-  container.replaceChildren(...children);
-  container.hidden = children.length === 0;
-}
-
 export function createTurnBriefingOverlay({
   root,
   onDecision,
@@ -62,11 +43,7 @@ export function createTurnBriefingOverlay({
   const shell = makeElement(documentRef, "article", "turn-briefing-overlay__shell");
   const visual = makeElement(documentRef, "figure", "turn-briefing-overlay__visual");
   const image = makeElement(documentRef, "img", "turn-briefing-overlay__image");
-  const visualMetadata = makeElement(documentRef, "div", "turn-briefing-overlay__visual-metadata");
-  const caption = makeElement(documentRef, "p", "turn-briefing-overlay__caption");
-  const credit = makeElement(documentRef, "figcaption", "turn-briefing-overlay__credit");
-  visualMetadata.append(caption, credit);
-  visual.append(image, visualMetadata);
+  visual.append(image);
 
   const report = makeElement(documentRef, "section", "turn-briefing-overlay__report");
   const stamp = makeElement(documentRef, "p", "turn-briefing-overlay__stamp");
@@ -129,9 +106,6 @@ export function createTurnBriefingOverlay({
     visual.hidden = !imageModel?.src;
     image.src = imageModel?.src ? String(imageModel.src) : "";
     image.alt = imageModel?.alt ? String(imageModel.alt) : "";
-    caption.textContent = imageModel?.caption ? String(imageModel.caption) : "";
-    caption.hidden = !caption.textContent;
-    renderImageCredit(documentRef, credit, imageModel);
 
     decisions.setAttribute("aria-label", String(model.choicesLabel || model.title || ""));
     detachChoiceListeners();

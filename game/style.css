@@ -61,7 +61,7 @@ button:disabled {
   padding: 24px;
   background:
     linear-gradient(90deg, rgba(19, 25, 18, 0.9), rgba(41, 39, 27, 0.5)),
-    url("local-assets/photos/rommel-campaign.png?v=947ab7ad34ec8de82a35f78d806e2fc1d6d6ac07") center / cover;
+    url("local-assets/photos/rommel-campaign.png?v=53092a12fd0c301fab72fccb751a3f3ddda2a54b") center / cover;
 }
 
 .menu-panel {
@@ -1029,20 +1029,20 @@ html:not([data-product-profile="online"]) #onlineGameStatus {
   padding: clamp(16px, 3vw, 34px);
   background:
     linear-gradient(90deg, rgba(16, 21, 16, 0.92), rgba(45, 43, 29, 0.58)),
-    url("local-assets/photos/el-alamein-victory.jpg?v=947ab7ad34ec8de82a35f78d806e2fc1d6d6ac07") center / cover;
+    url("local-assets/photos/el-alamein-victory.jpg?v=53092a12fd0c301fab72fccb751a3f3ddda2a54b") center / cover;
   color: #fff3c8;
 }
 
 .aar-view[data-winner="axis"] {
   background:
     linear-gradient(90deg, rgba(16, 21, 16, 0.92), rgba(57, 49, 30, 0.62)),
-    url("local-assets/photos/afrika-korps-advance.jpg?v=947ab7ad34ec8de82a35f78d806e2fc1d6d6ac07") center / cover;
+    url("local-assets/photos/afrika-korps-advance.jpg?v=53092a12fd0c301fab72fccb751a3f3ddda2a54b") center / cover;
 }
 
 .aar-view[data-winner="allied"] {
   background:
     linear-gradient(90deg, rgba(16, 21, 16, 0.92), rgba(42, 45, 31, 0.54)),
-    url("local-assets/photos/montgomery-1942.jpg?v=947ab7ad34ec8de82a35f78d806e2fc1d6d6ac07") center / cover;
+    url("local-assets/photos/montgomery-1942.jpg?v=53092a12fd0c301fab72fccb751a3f3ddda2a54b") center / cover;
 }
 
 .aar-shell {

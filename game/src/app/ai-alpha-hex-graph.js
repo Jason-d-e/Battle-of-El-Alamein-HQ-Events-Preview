@@ -5,7 +5,7 @@ import {
   ALPHA_SPATIAL_STATE_CHANNELS,
   validateAlphaSpatialDataset,
   validateAlphaSpatialEncoding,
-} from "./ai-alpha-spatial.js?v=947ab7ad34ec8de82a35f78d806e2fc1d6d6ac07";
+} from "./ai-alpha-spatial.js?v=53092a12fd0c301fab72fccb751a3f3ddda2a54b";
 
 export const ALPHA_HEX_GRAPH_SCHEMA = "zizi-el-alamein-alpha-hex-graph-v1";
 export const ALPHA_HEX_GRAPH_SCHEMA_V2 = "zizi-el-alamein-alpha-hex-graph-v2";

@@ -16,9 +16,6 @@ const LABELS = Object.freeze({
     choices: "选择你的回应",
     reportStamp: "作战报告",
     briefingStamp: "战地简报",
-    flavorImpact: "历史叙事：不改变本局规则或数值。",
-    gameplayImpact: "游戏事件：选择可能改变本局状态。",
-    sourceLink: "查看史料来源",
   }),
   en: Object.freeze({
     surface: "Headquarters",
@@ -37,9 +34,6 @@ const LABELS = Object.freeze({
     choices: "Choose your response",
     reportStamp: "Staff report",
     briefingStamp: "Operational briefing",
-    flavorImpact: "Historical narrative: no rules or values change.",
-    gameplayImpact: "Game event: this decision may change the current campaign.",
-    sourceLink: "Open historical source",
   }),
 });
 
@@ -64,21 +58,22 @@ function summarize(body) {
 }
 
 function presentMedia(media, language) {
+  const displayPolicy = media.displayPolicy ?? "hidden";
+  if (displayPolicy === "hidden") return null;
   return {
+    assetId: media.assetId,
     src: media.src,
-    alt: localized(media.alt, language, localized(media.caption, language)),
-    caption: localized(media.caption, language),
-    credit: media.license?.attribution ?? "",
-    licenseName: media.license?.name ?? "",
-    licenseUrl: media.license?.url ?? "",
-    modifications: localized(media.modifications, language),
+    alt: localized(media.altText, language),
+    displayPolicy: "image_only",
     overlay: media.overlay ?? null,
     subject: media.subject ?? "",
   };
 }
 
-function presentEntry(entry, language, labels) {
-  const images = (entry.media ?? []).map((media) => presentMedia(media, language));
+function presentEntry(entry, language) {
+  const images = (entry.media ?? [])
+    .map((media) => presentMedia(media, language))
+    .filter(Boolean);
   const date = entry.document?.timelineLabel
     ? `${localized(entry.document.timelineLabel, language)} · ${entry.document.date ?? ""}`.trim()
     : entry.eyebrow ?? "";
@@ -93,10 +88,6 @@ function presentEntry(entry, language, labels) {
     images,
     image: images[0] ?? null,
     impact: entry.impact,
-    impactText: entry.impact === "gameplay" ? labels.gameplayImpact : labels.flavorImpact,
-    sourceNote: localized(entry.source?.citation, language),
-    sourceUrl: entry.source?.url ?? "",
-    translationNote: localized(entry.document?.translationBasis, language),
   };
 }
 
@@ -117,16 +108,12 @@ export function toHeadquartersSurfaceModel({ catalog, narrativeModel, language =
         title: localized(definition.commander.role, lang),
         portraitSrc: definition.commander.portrait,
         portraitAlt: localized(definition.commander.portraitAlt, lang),
-        portraitCredit: definition.commander.portraitLicense?.attribution ?? "",
-        portraitLicenseName: definition.commander.portraitLicense?.name ?? "",
-        portraitLicenseUrl: definition.commander.portraitLicense?.url ?? "",
-        portraitModifications: localized(definition.commander.portraitLicense?.modifications, lang),
       },
       unreadCount: selected.unreadCount,
       emptyState: localized(definition.emptyState, lang),
       sections: {
-        events: selected.sections.events.entries.map((entry) => presentEntry(entry, lang, labels)),
-        letters: selected.sections.letters.entries.map((entry) => presentEntry(entry, lang, labels)),
+        events: selected.sections.events.entries.map((entry) => presentEntry(entry, lang)),
+        letters: selected.sections.letters.entries.map((entry) => presentEntry(entry, lang)),
       },
     };
   });
@@ -148,13 +135,10 @@ export function toTurnBriefingModel({ narrativeModel, language = "zh" } = {}) {
     title: pending.title,
     body: paragraphList(pending.body),
     image: firstImage ? {
+      assetId: firstImage.assetId,
       src: firstImage.src,
       alt: firstImage.alt,
-      credit: firstImage.credit,
-      caption: firstImage.caption,
-      licenseName: firstImage.licenseName,
-      licenseUrl: firstImage.licenseUrl,
-      modifications: firstImage.modifications,
+      displayPolicy: firstImage.displayPolicy,
     } : null,
     stampLabel: labels.briefingStamp,
     choicesLabel: labels.choices,

@@ -11,7 +11,7 @@
           "zh": "装甲集团军司令部",
           "en": "Panzer Army Headquarters"
         },
-        "portrait": "./local-assets/photos/rommel-portrait-1942.jpg?v=947ab7ad34ec8de82a35f78d806e2fc1d6d6ac07",
+        "portrait": "./local-assets/photos/rommel-portrait-1942.jpg?v=53092a12fd0c301fab72fccb751a3f3ddda2a54b",
         "portraitAlt": {
           "zh": "1942至1943年前后的埃尔温·隆美尔档案肖像",
           "en": "Archive portrait of Erwin Rommel, circa 1942–43"
@@ -42,7 +42,7 @@
           "zh": "英国第八集团军司令部",
           "en": "Eighth Army Headquarters"
         },
-        "portrait": "./local-assets/photos/montgomery-1942.jpg?v=947ab7ad34ec8de82a35f78d806e2fc1d6d6ac07",
+        "portrait": "./local-assets/photos/montgomery-1942.jpg?v=53092a12fd0c301fab72fccb751a3f3ddda2a54b",
         "portraitAlt": {
           "zh": "1942年北非战场上的伯纳德·蒙哥马利",
           "en": "Bernard Montgomery in North Africa, 1942"
@@ -102,25 +102,23 @@
       ],
       "media": [
         {
-          "src": "./local-assets/photos/axis-field-workshop-1941.jpg?v=947ab7ad34ec8de82a35f78d806e2fc1d6d6ac07",
-          "historicalFit": "representative",
-          "alt": {
+          "assetId": "IMG-AWM-011009-FIELD-WORKSHOP",
+          "src": "./local-assets/photos/axis-field-workshop-1941.jpg?v=53092a12fd0c301fab72fccb751a3f3ddda2a54b",
+          "altText": {
             "zh": "在利比亚被俘并摧毁后的德军野战维修场与车辆",
             "en": "A German field workshop and vehicles captured and destroyed by British forces in Libya"
           },
-          "caption": {
-            "zh": "代表性档案照片：1941年11月，利比亚一处被英军俘获并随后由盟军摧毁的德军野战维修场；并非1942年8月31日当天现场。",
-            "en": "Representative archive photograph: a German field workshop captured by British troops and subsequently destroyed by Allied forces in Libya, November 1941; not the scene of 31 August 1942."
-          },
-          "license": {
+          "displayPolicy": "image_only",
+          "requiredCredit": {
             "status": "verified",
-            "name": "Public domain",
-            "url": "https://creativecommons.org/publicdomain/mark/1.0/",
-            "attribution": "Australian War Memorial 011009 / George Silk"
-          },
-          "modifications": {
-            "zh": "界面使用裁切、缩放与色调滤镜；原始文件未修改。",
-            "en": "Cropped, scaled and tone-filtered in the interface; the source file is unchanged."
+            "rights": "Public domain",
+            "rightsUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+            "attribution": "Australian War Memorial 011009 / George Silk",
+            "sourceUrl": "https://www.awm.gov.au/collection/C36060",
+            "modifications": {
+              "zh": "界面使用裁切、缩放与色调滤镜；原始文件未修改。",
+              "en": "Cropped, scaled and tone-filtered in the interface; the source file is unchanged."
+            }
           }
         }
       ],
@@ -230,49 +228,47 @@
       },
       "media": [
         {
-          "src": "./local-assets/photos/rommel-bismarck-1942.jpg?v=947ab7ad34ec8de82a35f78d806e2fc1d6d6ac07",
-          "caption": {
-            "zh": "隆美尔与格奥尔格·冯·俾斯麦，1942年6月。红叉为界面叠加标记。",
-            "en": "Rommel and Georg von Bismarck, June 1942. The red cross is a UI overlay."
-          },
-          "alt": {
+          "assetId": "IMG-BARCH-101I-784-0232-37A-BISMARCK",
+          "src": "./local-assets/photos/rommel-bismarck-1942.jpg?v=53092a12fd0c301fab72fccb751a3f3ddda2a54b",
+          "altText": {
             "zh": "隆美尔与格奥尔格·冯·俾斯麦的档案照片；界面红叉表示俾斯麦阵亡",
             "en": "Archive photograph of Rommel and Georg von Bismarck; a UI red cross marks Bismarck as killed"
           },
+          "displayPolicy": "image_only",
           "subject": "Georg von Bismarck",
           "overlay": "killed",
-          "license": {
+          "requiredCredit": {
             "status": "verified",
-            "name": "CC BY-SA 3.0 DE",
-            "url": "https://creativecommons.org/licenses/by-sa/3.0/de/",
-            "attribution": "Bundesarchiv, Bild 101I-784-0232-37A / Otto"
-          },
-          "modifications": {
-            "zh": "界面使用裁切、缩放与色调滤镜，并叠加红叉；原始文件未修改。",
-            "en": "Cropped, scaled and tone-filtered with a red-cross UI overlay; the source file is unchanged."
+            "rights": "CC BY-SA 3.0 DE",
+            "rightsUrl": "https://creativecommons.org/licenses/by-sa/3.0/de/",
+            "attribution": "Bundesarchiv, Bild 101I-784-0232-37A / Otto",
+            "sourceUrl": "https://commons.wikimedia.org/wiki/File:Bundesarchiv_Bild_101I-784-0232-37A,_Nordafrika,_Erwin_Rommel,_Georg_v._Bismarck.jpg",
+            "modifications": {
+              "zh": "界面使用裁切、缩放与色调滤镜，并叠加红叉；原始文件未修改。",
+              "en": "Cropped, scaled and tone-filtered with a red-cross UI overlay; the source file is unchanged."
+            }
           }
         },
         {
-          "src": "./local-assets/photos/rommel-nehring-1942.jpg?v=947ab7ad34ec8de82a35f78d806e2fc1d6d6ac07",
-          "caption": {
-            "zh": "拜尔莱因、隆美尔与瓦尔特·内林，1942年4月。红叉为界面叠加标记。",
-            "en": "Bayerlein, Rommel and Walther Nehring, April 1942. The red cross is a UI overlay."
-          },
-          "alt": {
+          "assetId": "IMG-BARCH-101I-784-0203-14A-NEHRING",
+          "src": "./local-assets/photos/rommel-nehring-1942.jpg?v=53092a12fd0c301fab72fccb751a3f3ddda2a54b",
+          "altText": {
             "zh": "拜尔莱因、隆美尔与瓦尔特·内林的档案照片；界面红叉表示内林负伤",
             "en": "Archive photograph of Bayerlein, Rommel and Walther Nehring; a UI red cross marks Nehring as wounded"
           },
+          "displayPolicy": "image_only",
           "subject": "Walther Nehring",
           "overlay": "wounded",
-          "license": {
+          "requiredCredit": {
             "status": "verified",
-            "name": "CC BY-SA 3.0 DE",
-            "url": "https://creativecommons.org/licenses/by-sa/3.0/de/",
-            "attribution": "Bundesarchiv, Bild 101I-784-0203-14A / Moosmüller"
-          },
-          "modifications": {
-            "zh": "界面使用裁切、缩放与色调滤镜，并叠加红叉；原始文件未修改。",
-            "en": "Cropped, scaled and tone-filtered with a red-cross UI overlay; the source file is unchanged."
+            "rights": "CC BY-SA 3.0 DE",
+            "rightsUrl": "https://creativecommons.org/licenses/by-sa/3.0/de/",
+            "attribution": "Bundesarchiv, Bild 101I-784-0203-14A / Moosmüller",
+            "sourceUrl": "https://commons.wikimedia.org/wiki/File:Bundesarchiv_Bild_101I-784-0203-14A,_Nordafrika,_Bayerlein,_Rommel,_Nehring.jpg",
+            "modifications": {
+              "zh": "界面使用裁切、缩放与色调滤镜，并叠加红叉；原始文件未修改。",
+              "en": "Cropped, scaled and tone-filtered with a red-cross UI overlay; the source file is unchanged."
+            }
           }
         }
       ],
@@ -308,25 +304,23 @@
       },
       "media": [
         {
-          "src": "./local-assets/photos/axis-wrecked-lorry-1942.jpg?v=947ab7ad34ec8de82a35f78d806e2fc1d6d6ac07",
-          "historicalFit": "representative",
-          "alt": {
+          "assetId": "IMG-AWM-MED0175-WRECKED-LORRY",
+          "src": "./local-assets/photos/axis-wrecked-lorry-1942.jpg?v=53092a12fd0c301fab72fccb751a3f3ddda2a54b",
+          "altText": {
             "zh": "西部沙漠中被英国皇家空军炸毁的德军卡车",
             "en": "A German lorry destroyed by an RAF bomb in the Western Desert"
           },
-          "caption": {
-            "zh": "代表性档案照片：约1942年，西部沙漠中一辆被250磅炸弹摧毁的德军 Opel Blitz；并非已确认的同一支拥堵车队。",
-            "en": "Representative archive photograph: a German Opel Blitz destroyed by a 250 lb bomb in the Western Desert, c. 1942; not verified as the same packed convoy."
-          },
-          "license": {
+          "displayPolicy": "image_only",
+          "requiredCredit": {
             "status": "verified",
-            "name": "Public domain",
-            "url": "https://creativecommons.org/publicdomain/mark/1.0/",
-            "attribution": "Australian War Memorial MED0175"
-          },
-          "modifications": {
-            "zh": "界面使用裁切、缩放与色调滤镜；原始文件未修改。",
-            "en": "Cropped, scaled and tone-filtered in the interface; the source file is unchanged."
+            "rights": "Public domain",
+            "rightsUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+            "attribution": "Australian War Memorial MED0175",
+            "sourceUrl": "https://www.awm.gov.au/collection/C352922",
+            "modifications": {
+              "zh": "界面使用裁切、缩放与色调滤镜；原始文件未修改。",
+              "en": "Cropped, scaled and tone-filtered in the interface; the source file is unchanged."
+            }
           }
         }
       ],
@@ -362,25 +356,23 @@
       },
       "media": [
         {
-          "src": "./local-assets/photos/panzer-iii-north-africa-1942.jpg?v=947ab7ad34ec8de82a35f78d806e2fc1d6d6ac07",
-          "historicalFit": "representative",
-          "alt": {
+          "assetId": "IMG-BARCH-101I-785-0293-45-PANZER-III",
+          "src": "./local-assets/photos/panzer-iii-north-africa-1942.jpg?v=53092a12fd0c301fab72fccb751a3f3ddda2a54b",
+          "altText": {
             "zh": "1942年6月北非沙漠中的德军三号坦克322号",
             "en": "German Panzer III number 322 in the North African desert, June 1942"
           },
-          "caption": {
-            "zh": "代表性档案照片：1942年6月，北非沙漠中的三号坦克322号；并非已确认的阿拉姆哈勒法当日现场。",
-            "en": "Representative archive photograph: Panzer III number 322 in North Africa, June 1942; not verified as the Alam Halfa scene described."
-          },
-          "license": {
+          "displayPolicy": "image_only",
+          "requiredCredit": {
             "status": "verified",
-            "name": "CC BY-SA 3.0 DE",
-            "url": "https://creativecommons.org/licenses/by-sa/3.0/de/",
-            "attribution": "Bundesarchiv, Bild 101I-785-0293-45 / Tannenberg"
-          },
-          "modifications": {
-            "zh": "界面使用裁切、缩放与色调滤镜；原始文件未修改。",
-            "en": "Cropped, scaled and tone-filtered in the interface; the source file is unchanged."
+            "rights": "CC BY-SA 3.0 DE",
+            "rightsUrl": "https://creativecommons.org/licenses/by-sa/3.0/de/",
+            "attribution": "Bundesarchiv, Bild 101I-785-0293-45 / Tannenberg",
+            "sourceUrl": "https://commons.wikimedia.org/wiki/File:Bundesarchiv_Bild_101I-785-0293-45,_Nordafrika,_Panzer_III.jpg",
+            "modifications": {
+              "zh": "界面使用裁切、缩放与色调滤镜；原始文件未修改。",
+              "en": "Cropped, scaled and tone-filtered in the interface; the source file is unchanged."
+            }
           }
         }
       ],
