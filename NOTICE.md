@@ -1,5 +1,4 @@
 ﻿Copyright (c) 2026 Liang Liyuan.
-All rights reserved.
+All rights reserved in original project code, game-design implementation, original art, and original scenario expression except where otherwise stated.
 
-This source code, game design implementation, art, scenario data, and related assets are proprietary.
-No copying, redistribution, sublicensing, public hosting, commercial use, or derivative works are permitted without written permission.
+Third-party, Creative Commons, public-domain, open-source, and open-font materials are excluded from this proprietary claim and remain governed by their credited rights statements and licence terms. See the bundled Credits and third-party notices. Nothing in this Notice restricts rights granted by those licences or applicable law.

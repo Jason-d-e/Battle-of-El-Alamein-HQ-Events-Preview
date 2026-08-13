@@ -1,11 +1,11 @@
 import {
   alphaDenseNetworkParameterCount,
   normalizeAlphaDenseNetwork,
-} from "./ai-alpha-network.js?v=53092a12fd0c301fab72fccb751a3f3ddda2a54b";
+} from "./ai-alpha-network.js?v=6a644862a44efa862d693def7dfce39ce4fec673";
 import {
   alphaHexGraphParameterCount,
   normalizeAlphaHexGraphModel,
-} from "./ai-alpha-hex-graph.js?v=53092a12fd0c301fab72fccb751a3f3ddda2a54b";
+} from "./ai-alpha-hex-graph.js?v=6a644862a44efa862d693def7dfce39ce4fec673";
 
 export const ALPHA_MODEL_SCHEMA = "zizi-el-alamein-alpha-model-v1";
 export const ALPHA_VALUE_MODEL_SCHEMA = "zizi-el-alamein-alpha-value-model-v1";

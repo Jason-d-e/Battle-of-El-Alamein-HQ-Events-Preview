@@ -6,6 +6,7 @@ const SUPPORTED_LANGUAGES = ["zh", "en"];
 const SUPPORTED_EFFECTS = new Set(["none", "set-game-flag"]);
 const SUPPORTED_IMPACTS = new Set(["flavor", "gameplay"]);
 const SUPPORTED_DISPLAY_POLICIES = new Set(["hidden", "image_only"]);
+const SUPPORTED_DOCUMENT_KINDS = new Set(["letter", "telegram", "field-remark"]);
 const LOCALIZED_VALUE_FIELDS = new Set(SUPPORTED_LANGUAGES);
 const RUNTIME_MEDIA_FIELDS = new Set([
   "assetId",
@@ -146,9 +147,54 @@ function assertChoice(choice, entryId, seenChoiceIds) {
   }
 }
 
+function assertIsoDate(value, label) {
+  if (typeof value !== "string" || !/^\d{4}-\d{2}-\d{2}$/.test(value)) {
+    throw new Error(`${label} must be an ISO date`);
+  }
+  const parsed = new Date(`${value}T00:00:00Z`);
+  if (Number.isNaN(parsed.getTime()) || parsed.toISOString().slice(0, 10) !== value) {
+    throw new Error(`${label} must be a valid ISO date`);
+  }
+}
+
+function assertDocument(document, entry) {
+  if (!document || typeof document !== "object" || Array.isArray(document)) {
+    throw new Error(`Entry ${entry.id} document must be an object`);
+  }
+  if (!SUPPORTED_DOCUMENT_KINDS.has(document.kind)) {
+    throw new Error(`Entry ${entry.id} has unsupported document kind ${document.kind ?? "unknown"}`);
+  }
+  if (entry.surface !== "headquarters" || entry.section !== "letters") {
+    throw new Error(`Entry ${entry.id} document must appear in the headquarters letters section`);
+  }
+  assertIsoDate(document.date, `Entry ${entry.id} document date`);
+  if (document.date > entry.unlock.date) {
+    throw new Error(`Entry ${entry.id} document date cannot be later than its unlock date`);
+  }
+  if (typeof document.originalLanguage !== "string" || !document.originalLanguage.trim()) {
+    throw new Error(`Entry ${entry.id} document needs an original language`);
+  }
+  if (typeof document.originalTextVerified !== "boolean") {
+    throw new Error(`Entry ${entry.id} document needs an originalTextVerified flag`);
+  }
+  assertLocalizedValue(document.translationBasis, `Entry ${entry.id} document translationBasis`);
+  if (document.timelineLabel !== undefined) {
+    assertLocalizedValue(document.timelineLabel, `Entry ${entry.id} document timelineLabel`);
+  }
+}
+
 function validateCatalog(catalog) {
   if (!catalog || catalog.schemaVersion !== HISTORICAL_NARRATIVE_SCHEMA || !Array.isArray(catalog.entries)) {
     throw new Error(`Historical narrative catalog must use schema ${HISTORICAL_NARRATIVE_SCHEMA}`);
+  }
+  if (!catalog.turnDates || typeof catalog.turnDates !== "object" || Array.isArray(catalog.turnDates)) {
+    throw new Error("Historical narrative catalog needs a turnDates map");
+  }
+  for (const [turn, date] of Object.entries(catalog.turnDates)) {
+    if (!/^[1-9]\d*$/.test(turn)) {
+      throw new Error(`Historical narrative turnDates contains invalid turn ${turn}`);
+    }
+    assertIsoDate(date, `Historical narrative turn ${turn} date`);
   }
 
   const entryIds = new Set();
@@ -171,6 +217,11 @@ function validateCatalog(catalog) {
     if (!entry.unlock || !Number.isInteger(entry.unlock.turn) || entry.unlock.turn < 1) {
       throw new Error(`Entry ${entry.id} needs a positive integer unlock turn`);
     }
+    assertIsoDate(entry.unlock.date, `Entry ${entry.id} unlock date`);
+    const turnDate = catalog.turnDates[String(entry.unlock.turn)];
+    if (!turnDate || entry.unlock.date !== turnDate) {
+      throw new Error(`Entry ${entry.id} unlock date must match historical turn ${entry.unlock.turn}`);
+    }
     if (entry.unlock.timing !== "turn-start") {
       throw new Error(`Entry ${entry.id} has unsupported unlock timing ${entry.unlock.timing}`);
     }
@@ -187,6 +238,7 @@ function validateCatalog(catalog) {
     } else if (entry.surface !== "turn-briefing") {
       throw new Error(`Entry ${entry.id} has unsupported surface ${entry.surface}`);
     }
+    if (entry.document !== undefined) assertDocument(entry.document, entry);
 
     const seenChoiceIds = new Set();
     for (const choice of entry.choices ?? []) {

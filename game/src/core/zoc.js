@@ -1,5 +1,5 @@
-import { neighborsOf } from "./board.js?v=53092a12fd0c301fab72fccb751a3f3ddda2a54b";
-import { liveUnits } from "./units.js?v=53092a12fd0c301fab72fccb751a3f3ddda2a54b";
+import { neighborsOf } from "./board.js?v=6a644862a44efa862d693def7dfce39ce4fec673";
+import { liveUnits } from "./units.js?v=6a644862a44efa862d693def7dfce39ce4fec673";
 
 /**
  * Reports whether a hex is in an enemy zone of control.

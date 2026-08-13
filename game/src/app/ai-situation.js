@@ -6,7 +6,7 @@ import {
   evaluateAlliedBreakthroughVictory,
   liveUnits,
   neighborsOf,
-} from "../core/index.js?v=53092a12fd0c301fab72fccb751a3f3ddda2a54b";
+} from "../core/index.js?v=6a644862a44efa862d693def7dfce39ce4fec673";
 
 const OPPOSITE_SIDE = Object.freeze({ axis: "allied", allied: "axis" });
 const LOCAL_FORCE_RADIUS = 3;

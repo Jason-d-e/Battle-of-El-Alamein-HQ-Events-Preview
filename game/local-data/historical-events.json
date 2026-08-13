@@ -1,5 +1,11 @@
 {
   "schemaVersion": 1,
+  "turnDates": {
+    "1": "1942-08-31",
+    "2": "1942-08-31",
+    "3": "1942-09-01",
+    "4": "1942-09-01"
+  },
   "headquarters": {
     "axis": {
       "commander": {
@@ -8,10 +14,10 @@
           "en": "Erwin Rommel"
         },
         "role": {
-          "zh": "装甲集团军司令部",
-          "en": "Panzer Army Headquarters"
+          "zh": "非洲装甲集团军司令部（Panzerarmee Afrika）",
+          "en": "Headquarters, Panzerarmee Afrika"
         },
-        "portrait": "./local-assets/photos/rommel-portrait-1942.jpg?v=53092a12fd0c301fab72fccb751a3f3ddda2a54b",
+        "portrait": "./local-assets/photos/rommel-portrait-1942.jpg?v=6a644862a44efa862d693def7dfce39ce4fec673",
         "portraitAlt": {
           "zh": "1942至1943年前后的埃尔温·隆美尔档案肖像",
           "en": "Archive portrait of Erwin Rommel, circa 1942–43"
@@ -42,7 +48,7 @@
           "zh": "英国第八集团军司令部",
           "en": "Eighth Army Headquarters"
         },
-        "portrait": "./local-assets/photos/montgomery-1942.jpg?v=53092a12fd0c301fab72fccb751a3f3ddda2a54b",
+        "portrait": "./local-assets/photos/montgomery-1942.jpg?v=6a644862a44efa862d693def7dfce39ce4fec673",
         "portraitAlt": {
           "zh": "1942年北非战场上的伯纳德·蒙哥马利",
           "en": "Bernard Montgomery in North Africa, 1942"
@@ -72,18 +78,19 @@
       "impact": "flavor",
       "unlock": {
         "turn": 1,
+        "date": "1942-08-31",
         "timing": "turn-start"
       },
       "content": {
         "zh": {
           "title": "背景",
           "eyebrow": "1942年8月31日 · 晨间战情简报",
-          "body": "轴心军的物资状况已经接近极限。8月初，约35%的车辆正在维修；运输车辆中约85%为缴获的英国或美国车型，统一零件严重不足。约2,000辆卡车和近100门火炮仍滞留在意大利，另有大量车辆和坦克尚在德国。英军则更接近亚历山大、开罗和苏伊士的补给基地。9月1日的一段交战中，罗梅尔记述英军约以十发炮弹回应轴心军一发。"
+          "body": "8月31日清晨，非洲装甲集团军的困境不在作战图上，而在修理场和运输纵队里。8月初，每一百辆车约有三十五辆正在修理；每一百辆运输车中，约八十五辆是缴获的英、美车型，零件标准无从统一。约2,000辆卡车和近100门火炮仍在意大利，更多车辆与坦克尚留德国。英军背靠亚历山大、开罗和苏伊士的补给基地；隆美尔每向东推进一步，身后的运输线便更长一分，而可供周转的车辆并没有随之增加。"
         },
         "en": {
           "title": "Background",
           "eyebrow": "31 August 1942 · Morning situation briefing",
-          "body": "Axis logistics were near their limit. In early August, about 35 percent of vehicles were under repair; roughly 85 percent of the transport fleet consisted of captured British or American types, making standard spares scarce. About 2,000 lorries and almost 100 guns remained in Italy, while many vehicles and tanks were still in Germany. The British were far closer to the supply bases at Alexandria, Cairo and Suez. During one action on 1 September, Rommel recorded roughly ten British shells answering every Axis shell."
+          "body": "On the morning of 31 August, the predicament of Panzerarmee Afrika lay not on the operations map but in its workshops and transport columns. At the beginning of August, about thirty-five vehicles in every hundred were under repair; of every hundred transport vehicles, roughly eighty-five were captured British or American types, so there was no common standard for spare parts. Some 2,000 lorries and nearly 100 guns were still in Italy, with more vehicles and tanks left behind in Germany. The British had Alexandria, Cairo and Suez at their back. Every mile Rommel drove east lengthened the road behind him, but did not add another lorry to carry his supplies."
         }
       },
       "choices": [
@@ -103,7 +110,7 @@
       "media": [
         {
           "assetId": "IMG-AWM-011009-FIELD-WORKSHOP",
-          "src": "./local-assets/photos/axis-field-workshop-1941.jpg?v=53092a12fd0c301fab72fccb751a3f3ddda2a54b",
+          "src": "./local-assets/photos/axis-field-workshop-1941.jpg?v=6a644862a44efa862d693def7dfce39ce4fec673",
           "altText": {
             "zh": "在利比亚被俘并摧毁后的德军野战维修场与车辆",
             "en": "A German field workshop and vehicles captured and destroyed by British forces in Libya"
@@ -125,8 +132,8 @@
       "source": {
         "url": "https://www.raf.mod.uk/what-we-do/our-history/air-historical-branch/second-world-war-campaign-narratives/middle-east-campaigns-volume-iv-operations-in-libya-the-western-desert-and-tunisia-july-1942-may-1943/",
         "citation": {
-          "zh": "英国皇家空军空战史处《中东战役》第四卷；相关数字亦见《隆美尔战时文件》。十比一仅指隆美尔对9月1日一段交战的记述，并非整个战区的恒定比例。",
-          "en": "RAF Air Historical Branch, Middle East Campaigns, Volume IV; figures also reproduced from The Rommel Papers. The ten-to-one comparison is limited to Rommel's account of an action on 1 September, not presented as a theater-wide constant."
+          "zh": "英国皇家空军空战史处《中东战役》第四卷及《隆美尔战时文件》所载战前车辆、火炮与运输数据；补给线对比参见 Ronald Walker《Alam Halfa and Alamein》第25页。正文为背景性改写，不作逐字引语。",
+          "en": "Pre-battle vehicle, gun and transport figures from RAF Air Historical Branch, Middle East Campaigns, Volume IV, and The Rommel Papers; supply-line comparison from Ronald Walker, Alam Halfa and Alamein, p. 25. The briefing is a background adaptation, not a verbatim quotation."
         }
       }
     },
@@ -138,13 +145,14 @@
       "impact": "flavor",
       "unlock": {
         "turn": 1,
+        "date": "1942-08-31",
         "timing": "turn-start"
       },
       "content": {
         "zh": {
           "title": "来自最高统帅部的口信",
           "eyebrow": "司令部报告 · 1942年8月",
-          "body": "纽拉特见到了元首。元首向装甲集团军致意，并已获知罗梅尔对油料、兵力和战局的忧虑。"
+          "body": "纽拉特见到了元首。元首向非洲装甲集团军致意，并已获知隆美尔对油料、兵力和战局的忧虑。"
         },
         "en": {
           "title": "Message from Führer Headquarters",
@@ -168,6 +176,7 @@
       "impact": "flavor",
       "unlock": {
         "turn": 1,
+        "date": "1942-08-31",
         "timing": "turn-start"
       },
       "content": {
@@ -212,24 +221,25 @@
       "impact": "flavor",
       "unlock": {
         "turn": 2,
+        "date": "1942-08-31",
         "timing": "turn-start"
       },
       "content": {
         "zh": {
           "title": "指挥层遭受损失",
           "eyebrow": "战损报告 · 1942年8月31日",
-          "body": "第21装甲师师长格奥尔格·冯·俾斯麦阵亡，非洲军军长瓦尔特·内林负伤。指挥计划受到严重破坏，弗里茨·拜尔莱因接掌非洲军。"
+          "body": "德军第21装甲师（21. Panzer-Division）师长格奥尔格·冯·俾斯麦阵亡；德国非洲军（Deutsches Afrikakorps，DAK）军长瓦尔特·内林负伤。第15装甲师（15. Panzer-Division）师长随后接掌该军，师、军两级的指挥链被迫在进攻中重组。"
         },
         "en": {
           "title": "Losses in the command chain",
           "eyebrow": "Casualty report · 31 August 1942",
-          "body": "Georg von Bismarck, commander of the 21st Panzer Division, was killed, while Afrika Korps commander Walther Nehring was wounded. The command plan was badly disrupted and Fritz Bayerlein assumed command of the corps."
+          "body": "Georg von Bismarck, commander of the German 21. Panzer-Division, was killed; Walther Nehring, commanding general of the Deutsches Afrikakorps (DAK), was wounded. The commander of 15. Panzer-Division then took over the corps, forcing the chain of command at both divisional and corps level to be rebuilt in the midst of the offensive."
         }
       },
       "media": [
         {
           "assetId": "IMG-BARCH-101I-784-0232-37A-BISMARCK",
-          "src": "./local-assets/photos/rommel-bismarck-1942.jpg?v=53092a12fd0c301fab72fccb751a3f3ddda2a54b",
+          "src": "./local-assets/photos/rommel-bismarck-1942.jpg?v=6a644862a44efa862d693def7dfce39ce4fec673",
           "altText": {
             "zh": "隆美尔与格奥尔格·冯·俾斯麦的档案照片；界面红叉表示俾斯麦阵亡",
             "en": "Archive photograph of Rommel and Georg von Bismarck; a UI red cross marks Bismarck as killed"
@@ -251,7 +261,7 @@
         },
         {
           "assetId": "IMG-BARCH-101I-784-0203-14A-NEHRING",
-          "src": "./local-assets/photos/rommel-nehring-1942.jpg?v=53092a12fd0c301fab72fccb751a3f3ddda2a54b",
+          "src": "./local-assets/photos/rommel-nehring-1942.jpg?v=6a644862a44efa862d693def7dfce39ce4fec673",
           "altText": {
             "zh": "拜尔莱因、隆美尔与瓦尔特·内林的档案照片；界面红叉表示内林负伤",
             "en": "Archive photograph of Bayerlein, Rommel and Walther Nehring; a UI red cross marks Nehring as wounded"
@@ -273,10 +283,10 @@
         }
       ],
       "source": {
-        "url": "https://www.armyupress.army.mil/Portals/7/combat-studies-institute/csi-books/AlamHalfa_Hart.pdf",
+        "url": "https://22battalion.org.nz/publications/histories/alamein.pdf",
         "citation": {
-          "zh": "Russell A. Hart《Alam Halfa: A Retrospective》，美国陆军战斗研究所，含拜尔莱因的叙述。",
-          "en": "Russell A. Hart, Alam Halfa: A Retrospective, U.S. Army Combat Studies Institute, including Bayerlein's account."
+          "zh": "Ronald Walker《Alam Halfa and Alamein》，新西兰官方战史，第154、156页：内林负伤、俾斯麦阵亡，随后由第15装甲师师长接掌德国非洲军。该来源未列接任者姓名，正文不作推定。",
+          "en": "Ronald Walker, Alam Halfa and Alamein, New Zealand official history, pp. 154 and 156: Nehring was wounded, Bismarck was killed, and the commander of 15. Panzer-Division then took over the Deutsches Afrikakorps. The source does not name that successor, so the text does not infer one."
         }
       }
     },
@@ -288,6 +298,7 @@
       "impact": "flavor",
       "unlock": {
         "turn": 3,
+        "date": "1942-09-01",
         "timing": "turn-start"
       },
       "content": {
@@ -305,7 +316,7 @@
       "media": [
         {
           "assetId": "IMG-AWM-MED0175-WRECKED-LORRY",
-          "src": "./local-assets/photos/axis-wrecked-lorry-1942.jpg?v=53092a12fd0c301fab72fccb751a3f3ddda2a54b",
+          "src": "./local-assets/photos/axis-wrecked-lorry-1942.jpg?v=6a644862a44efa862d693def7dfce39ce4fec673",
           "altText": {
             "zh": "西部沙漠中被英国皇家空军炸毁的德军卡车",
             "en": "A German lorry destroyed by an RAF bomb in the Western Desert"
@@ -340,6 +351,7 @@
       "impact": "flavor",
       "unlock": {
         "turn": 4,
+        "date": "1942-09-01",
         "timing": "turn-start"
       },
       "content": {
@@ -357,7 +369,7 @@
       "media": [
         {
           "assetId": "IMG-BARCH-101I-785-0293-45-PANZER-III",
-          "src": "./local-assets/photos/panzer-iii-north-africa-1942.jpg?v=53092a12fd0c301fab72fccb751a3f3ddda2a54b",
+          "src": "./local-assets/photos/panzer-iii-north-africa-1942.jpg?v=6a644862a44efa862d693def7dfce39ce4fec673",
           "altText": {
             "zh": "1942年6月北非沙漠中的德军三号坦克322号",
             "en": "German Panzer III number 322 in the North African desert, June 1942"
@@ -387,17 +399,18 @@
     {
       "id": "axis-turn-4-field-remark",
       "surface": "headquarters",
-      "section": "events",
+      "section": "letters",
       "side": "axis",
       "impact": "flavor",
       "unlock": {
         "turn": 4,
+        "date": "1942-09-01",
         "timing": "turn-start"
       },
       "content": {
         "zh": {
           "title": "战地谈话",
-          "eyebrow": "罗梅尔对凯塞林 · 1942年9月1日",
+          "eyebrow": "隆美尔对凯塞林 · 1942年9月1日",
           "body": "“那混蛋就是不进攻。”"
         },
         "en": {
@@ -412,15 +425,15 @@
         "originalLanguage": "de",
         "originalTextVerified": false,
         "translationBasis": {
-          "zh": "据官方战史所引英文转译",
-          "en": "English wording quoted in the official history"
+          "zh": "据新西兰官方战史所引英文转译；德文原话尚未核实",
+          "en": "Published English rendering in the New Zealand official history; original German wording not verified"
         }
       },
       "source": {
         "url": "https://22battalion.org.nz/publications/histories/alamein.pdf",
         "citation": {
-          "zh": "Ronald Walker《Alam Halfa and Alamein》，新西兰官方战史，引德国档案 GMDS 79009/79002。此句为战地谈话，不是信件。",
-          "en": "Ronald Walker, Alam Halfa and Alamein, New Zealand official history, citing German records GMDS 79009/79002. This is a spoken remark, not a letter."
+          "zh": "Ronald Walker《Alam Halfa and Alamein》，新西兰官方战史，第284页，引德国档案 GMDS 79009/79002。此句是战史转引的口头评论，并非书信；按 HQ 文献分类规则归入“信件”页。",
+          "en": "Ronald Walker, Alam Halfa and Alamein, New Zealand official history, p. 284, citing German records GMDS 79009/79002. This is reported speech rather than a letter; the HQ information architecture groups quoted documents and speech in the Letters tab."
         }
       }
     }
