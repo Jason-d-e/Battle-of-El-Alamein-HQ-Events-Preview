@@ -3,28 +3,28 @@ import {
   getHex,
   liveUnits,
   unitById,
-} from "../core/index.js?v=16ec5c1c0b9999875f5d6dfed861e5c8dba1bd36";
+} from "../core/index.js?v=e4554d5a3aa8dc91190cf1cd919b9cf6fb148fcc";
 import {
   DEFAULT_SITUATION_WEIGHTS,
   nearestDistanceToAny,
-} from "./ai-situation.js?v=16ec5c1c0b9999875f5d6dfed861e5c8dba1bd36";
+} from "./ai-situation.js?v=e4554d5a3aa8dc91190cf1cd919b9cf6fb148fcc";
 import {
   alphaDenseNetworkForward,
   applyAlphaDenseNetworkGradient,
   createAlphaDenseNetwork,
   normalizeAlphaDenseNetwork,
-} from "./ai-alpha-network.js?v=16ec5c1c0b9999875f5d6dfed861e5c8dba1bd36";
+} from "./ai-alpha-network.js?v=e4554d5a3aa8dc91190cf1cd919b9cf6fb148fcc";
 import {
   buildTrajectoryLineageComponents,
   unionTrajectoryIds,
-} from "../../../shared/wargame-alpha/trajectory-lineage.js?v=16ec5c1c0b9999875f5d6dfed861e5c8dba1bd36";
-import { canonicalSerialize } from "../../../shared/wargame-alpha/environment-contract.js?v=16ec5c1c0b9999875f5d6dfed861e5c8dba1bd36";
-import { canonicalSha256 } from "../../../shared/wargame-alpha/fingerprint.js?v=16ec5c1c0b9999875f5d6dfed861e5c8dba1bd36";
+} from "../../../shared/wargame-alpha/trajectory-lineage.js?v=e4554d5a3aa8dc91190cf1cd919b9cf6fb148fcc";
+import { canonicalSerialize } from "../../../shared/wargame-alpha/environment-contract.js?v=e4554d5a3aa8dc91190cf1cd919b9cf6fb148fcc";
+import { canonicalSha256 } from "../../../shared/wargame-alpha/fingerprint.js?v=e4554d5a3aa8dc91190cf1cd919b9cf6fb148fcc";
 import {
   evaluateAlphaHexGraphModel,
   trainAlphaHexGraphModel,
-} from "./ai-alpha-hex-graph.js?v=16ec5c1c0b9999875f5d6dfed861e5c8dba1bd36";
-import { buildAlphaSpatialDataset } from "./ai-alpha-spatial.js?v=16ec5c1c0b9999875f5d6dfed861e5c8dba1bd36";
+} from "./ai-alpha-hex-graph.js?v=e4554d5a3aa8dc91190cf1cd919b9cf6fb148fcc";
+import { buildAlphaSpatialDataset } from "./ai-alpha-spatial.js?v=e4554d5a3aa8dc91190cf1cd919b9cf6fb148fcc";
 import {
   ALPHA_MODEL_SCHEMA,
   ALPHA_TRAINING_DATA_SUMMARY_SCHEMA,
@@ -32,7 +32,7 @@ import {
   alphaModelFeatureContract,
   alphaModelEnvironmentFingerprint,
   alphaModelMetadata,
-} from "./ai-alpha-model.js?v=16ec5c1c0b9999875f5d6dfed861e5c8dba1bd36";
+} from "./ai-alpha-model.js?v=e4554d5a3aa8dc91190cf1cd919b9cf6fb148fcc";
 
 export const VALUE_FEATURE_SCALES = Object.freeze({
   turnProgress: 1,

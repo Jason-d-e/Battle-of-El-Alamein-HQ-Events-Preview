@@ -1,3 +1,11 @@
+html[data-product-profile="hq-events-preview"] .menu-view {
+  place-items: center;
+  padding: 24px;
+  background:
+    linear-gradient(90deg, rgba(19, 25, 18, 0.9), rgba(41, 39, 27, 0.5)),
+    url("../../local-assets/photos/rommel-campaign.png?v=e4554d5a3aa8dc91190cf1cd919b9cf6fb148fcc") center / cover;
+}
+
 .headquarters-host {
   --hq-ink: var(--ops-ink, #20261f);
   --hq-muted: var(--ops-muted, #625f4f);

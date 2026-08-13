@@ -17,7 +17,7 @@
           "zh": "非洲装甲集团军司令部（Panzerarmee Afrika）",
           "en": "Headquarters, Panzerarmee Afrika"
         },
-        "portrait": "./local-assets/photos/rommel-portrait-1942.jpg?v=16ec5c1c0b9999875f5d6dfed861e5c8dba1bd36",
+        "portrait": "./local-assets/photos/rommel-portrait-1942.jpg?v=e4554d5a3aa8dc91190cf1cd919b9cf6fb148fcc",
         "portraitAlt": {
           "zh": "1942至1943年前后的埃尔温·隆美尔档案肖像",
           "en": "Archive portrait of Erwin Rommel, circa 1942–43"
@@ -48,7 +48,7 @@
           "zh": "英国第八集团军司令部",
           "en": "Eighth Army Headquarters"
         },
-        "portrait": "./local-assets/photos/montgomery-1942.jpg?v=16ec5c1c0b9999875f5d6dfed861e5c8dba1bd36",
+        "portrait": "./local-assets/photos/montgomery-1942.jpg?v=e4554d5a3aa8dc91190cf1cd919b9cf6fb148fcc",
         "portraitAlt": {
           "zh": "1942年北非战场上的伯纳德·蒙哥马利",
           "en": "Bernard Montgomery in North Africa, 1942"
@@ -85,12 +85,12 @@
         "zh": {
           "title": "背景",
           "eyebrow": "1942年8月31日 · 晨间战情简报",
-          "body": "8月31日清晨，非洲装甲集团军的困境不在作战图上，而在修理场和运输纵队里。8月初，每一百辆车约有三十五辆正在修理；每一百辆运输车中，约八十五辆是缴获的英、美车型，零件标准无从统一。约2,000辆卡车和近100门火炮仍在意大利，更多车辆与坦克尚留德国。英军背靠亚历山大、开罗和苏伊士的补给基地；隆美尔每向东推进一步，身后的运输线便更长一分，而可供周转的车辆并没有随之增加。"
+          "body": "轴心军的物资状况已经接近极限。8月初，约35%的车辆正在维修；运输车辆中约85%为缴获的英国或美国车型，统一零件严重不足。约2,000辆卡车和近100门火炮仍滞留在意大利，另有大量车辆和坦克尚在德国。英军则更接近亚历山大、开罗和苏伊士的补给基地。阿拉曼距亚历山大约60英里。轴心军最近一座有一定规模的港口托布鲁克，距前线约350英里；班加西则约600英里。8月30日虽有一艘油轮抵达托布鲁克，空运也已开始，德军第15、第21装甲师所存油料仍只够坦克行驶约100英里、其他车辆约150英里。"
         },
         "en": {
           "title": "Background",
           "eyebrow": "31 August 1942 · Morning situation briefing",
-          "body": "On the morning of 31 August, the predicament of Panzerarmee Afrika lay not on the operations map but in its workshops and transport columns. At the beginning of August, about thirty-five vehicles in every hundred were under repair; of every hundred transport vehicles, roughly eighty-five were captured British or American types, so there was no common standard for spare parts. Some 2,000 lorries and nearly 100 guns were still in Italy, with more vehicles and tanks left behind in Germany. The British had Alexandria, Cairo and Suez at their back. Every mile Rommel drove east lengthened the road behind him, but did not add another lorry to carry his supplies."
+          "body": "Axis logistics were near their limit. In early August, about 35 percent of vehicles were under repair; roughly 85 percent of the transport fleet consisted of captured British or American types, making standard spares scarce. About 2,000 lorries and almost 100 guns remained in Italy, while many vehicles and tanks were still in Germany. The British were far closer to the supply bases at Alexandria, Cairo and Suez. El Alamein lay about 60 miles from Alexandria. The Axis forces' nearest port of any size, Tobruk, lay roughly 350 miles behind the front, and Benghazi about 600. Although a tanker reached Tobruk on 30 August and an airlift began, the German 15th and 21st Panzer Divisions still had fuel for only about 100 miles of tank movement and 150 miles for other vehicles."
         }
       },
       "choices": [
@@ -110,7 +110,7 @@
       "media": [
         {
           "assetId": "IMG-AWM-011009-FIELD-WORKSHOP",
-          "src": "./local-assets/photos/axis-field-workshop-1941.jpg?v=16ec5c1c0b9999875f5d6dfed861e5c8dba1bd36",
+          "src": "./local-assets/photos/axis-field-workshop-1941.jpg?v=e4554d5a3aa8dc91190cf1cd919b9cf6fb148fcc",
           "altText": {
             "zh": "在利比亚被俘并摧毁后的德军野战维修场与车辆",
             "en": "A German field workshop and vehicles captured and destroyed by British forces in Libya"
@@ -132,8 +132,8 @@
       "source": {
         "url": "https://www.raf.mod.uk/what-we-do/our-history/air-historical-branch/second-world-war-campaign-narratives/middle-east-campaigns-volume-iv-operations-in-libya-the-western-desert-and-tunisia-july-1942-may-1943/",
         "citation": {
-          "zh": "英国皇家空军空战史处《中东战役》第四卷及《隆美尔战时文件》所载战前车辆、火炮与运输数据；补给线对比参见 Ronald Walker《Alam Halfa and Alamein》第25页。正文为背景性改写，不作逐字引语。",
-          "en": "Pre-battle vehicle, gun and transport figures from RAF Air Historical Branch, Middle East Campaigns, Volume IV, and The Rommel Papers; supply-line comparison from Ronald Walker, Alam Halfa and Alamein, p. 25. The briefing is a background adaptation, not a verbatim quotation."
+          "zh": "英国皇家空军空战史处《中东战役》第四卷及《隆美尔战时文件》所载战前车辆、火炮与运输数据；亚历山大、托布鲁克与班加西的里程对比参见美国陆军航空军官方战史第二卷第一章及 Russell A. Hart《Alam Halfa: A Retrospective》第23页；8月30日油轮、空运与装甲师油料里程参见 Ronald Walker《Alam Halfa and Alamein》第146至147页。正文为背景性改写，不作逐字引语。",
+          "en": "Pre-battle vehicle, gun and transport figures from RAF Air Historical Branch, Middle East Campaigns, Volume IV, and The Rommel Papers; Alexandria, Tobruk and Benghazi distances from the USAAF official history, volume II, chapter 1, and Russell A. Hart, Alam Halfa: A Retrospective, p. 23; the 30 August tanker, airlift and panzer-division fuel ranges from Ronald Walker, Alam Halfa and Alamein, pp. 146-147. The briefing is a background adaptation, not a verbatim quotation."
         }
       }
     },
@@ -239,7 +239,7 @@
       "media": [
         {
           "assetId": "IMG-BARCH-101I-784-0232-37A-BISMARCK",
-          "src": "./local-assets/photos/rommel-bismarck-1942.jpg?v=16ec5c1c0b9999875f5d6dfed861e5c8dba1bd36",
+          "src": "./local-assets/photos/rommel-bismarck-1942.jpg?v=e4554d5a3aa8dc91190cf1cd919b9cf6fb148fcc",
           "altText": {
             "zh": "隆美尔与格奥尔格·冯·俾斯麦的档案照片；界面红叉表示俾斯麦阵亡",
             "en": "Archive photograph of Rommel and Georg von Bismarck; a UI red cross marks Bismarck as killed"
@@ -261,7 +261,7 @@
         },
         {
           "assetId": "IMG-BARCH-101I-784-0203-14A-NEHRING",
-          "src": "./local-assets/photos/rommel-nehring-1942.jpg?v=16ec5c1c0b9999875f5d6dfed861e5c8dba1bd36",
+          "src": "./local-assets/photos/rommel-nehring-1942.jpg?v=e4554d5a3aa8dc91190cf1cd919b9cf6fb148fcc",
           "altText": {
             "zh": "拜尔莱因、隆美尔与瓦尔特·内林的档案照片；界面红叉表示内林负伤",
             "en": "Archive photograph of Bayerlein, Rommel and Walther Nehring; a UI red cross marks Nehring as wounded"
@@ -316,7 +316,7 @@
       "media": [
         {
           "assetId": "IMG-AWM-MED0175-WRECKED-LORRY",
-          "src": "./local-assets/photos/axis-wrecked-lorry-1942.jpg?v=16ec5c1c0b9999875f5d6dfed861e5c8dba1bd36",
+          "src": "./local-assets/photos/axis-wrecked-lorry-1942.jpg?v=e4554d5a3aa8dc91190cf1cd919b9cf6fb148fcc",
           "altText": {
             "zh": "西部沙漠中被英国皇家空军炸毁的德军卡车",
             "en": "A German lorry destroyed by an RAF bomb in the Western Desert"
@@ -369,7 +369,7 @@
       "media": [
         {
           "assetId": "IMG-BARCH-101I-785-0293-45-PANZER-III",
-          "src": "./local-assets/photos/panzer-iii-north-africa-1942.jpg?v=16ec5c1c0b9999875f5d6dfed861e5c8dba1bd36",
+          "src": "./local-assets/photos/panzer-iii-north-africa-1942.jpg?v=e4554d5a3aa8dc91190cf1cd919b9cf6fb148fcc",
           "altText": {
             "zh": "1942年6月北非沙漠中的德军三号坦克322号",
             "en": "German Panzer III number 322 in the North African desert, June 1942"

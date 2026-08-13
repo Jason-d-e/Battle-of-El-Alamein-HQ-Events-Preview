@@ -2,7 +2,7 @@ import {
   createBoard,
   liveUnits,
   neighborsOf,
-} from "../core/index.js?v=16ec5c1c0b9999875f5d6dfed861e5c8dba1bd36";
+} from "../core/index.js?v=e4554d5a3aa8dc91190cf1cd919b9cf6fb148fcc";
 
 export const ALPHA_SPATIAL_CONTRACT_SCHEMA = "zizi-el-alamein-alpha-spatial-contract-v1";
 export const ALPHA_SPATIAL_STATE_SCHEMA = "zizi-el-alamein-alpha-spatial-state-v1";

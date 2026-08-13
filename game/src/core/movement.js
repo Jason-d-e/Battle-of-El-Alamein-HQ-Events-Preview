@@ -1,6 +1,6 @@
-import { neighborsOf } from "./board.js?v=16ec5c1c0b9999875f5d6dfed861e5c8dba1bd36";
-import { terrainRule } from "./terrain.js?v=16ec5c1c0b9999875f5d6dfed861e5c8dba1bd36";
-import { liveUnits, resolveUnit } from "./units.js?v=16ec5c1c0b9999875f5d6dfed861e5c8dba1bd36";
+import { neighborsOf } from "./board.js?v=e4554d5a3aa8dc91190cf1cd919b9cf6fb148fcc";
+import { terrainRule } from "./terrain.js?v=e4554d5a3aa8dc91190cf1cd919b9cf6fb148fcc";
+import { liveUnits, resolveUnit } from "./units.js?v=e4554d5a3aa8dc91190cf1cd919b9cf6fb148fcc";
 
 /**
  * Calculates the unit movement allowance after scenario-wide modifiers.

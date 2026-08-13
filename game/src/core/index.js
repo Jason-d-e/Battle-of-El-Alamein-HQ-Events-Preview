@@ -1,12 +1,12 @@
-export { createBoard, getHex, hexDistance, neighborsOf } from "./board.js?v=16ec5c1c0b9999875f5d6dfed861e5c8dba1bd36";
-export { terrainRule, isPassableTerrain } from "./terrain.js?v=16ec5c1c0b9999875f5d6dfed861e5c8dba1bd36";
-export { liveUnitAt, liveUnits, resolveUnit, unitById } from "./units.js?v=16ec5c1c0b9999875f5d6dfed861e5c8dba1bd36";
-export { isEnemyZoc } from "./zoc.js?v=16ec5c1c0b9999875f5d6dfed861e5c8dba1bd36";
-export { getReachableHexes, movementAllowance } from "./movement.js?v=16ec5c1c0b9999875f5d6dfed861e5c8dba1bd36";
-export { getLegalRetreatDestinations, getLegalRetreatPaths } from "./retreat.js?v=16ec5c1c0b9999875f5d6dfed861e5c8dba1bd36";
-export { calculateOdds, canAttack, defenseBreakdown, planCombatResult } from "./combat.js?v=16ec5c1c0b9999875f5d6dfed861e5c8dba1bd36";
-export { shouldCheckAxisObjectiveVictoryAtPhaseEnd } from "./phases.js?v=16ec5c1c0b9999875f5d6dfed861e5c8dba1bd36";
-export { evaluateAlliedBreakthroughVictory, evaluateAxisObjectiveVictory, getObjectiveStatus, isAlliedBreakthroughMove } from "./victory.js?v=16ec5c1c0b9999875f5d6dfed861e5c8dba1bd36";
+export { createBoard, getHex, hexDistance, neighborsOf } from "./board.js?v=e4554d5a3aa8dc91190cf1cd919b9cf6fb148fcc";
+export { terrainRule, isPassableTerrain } from "./terrain.js?v=e4554d5a3aa8dc91190cf1cd919b9cf6fb148fcc";
+export { liveUnitAt, liveUnits, resolveUnit, unitById } from "./units.js?v=e4554d5a3aa8dc91190cf1cd919b9cf6fb148fcc";
+export { isEnemyZoc } from "./zoc.js?v=e4554d5a3aa8dc91190cf1cd919b9cf6fb148fcc";
+export { getReachableHexes, movementAllowance } from "./movement.js?v=e4554d5a3aa8dc91190cf1cd919b9cf6fb148fcc";
+export { getLegalRetreatDestinations, getLegalRetreatPaths } from "./retreat.js?v=e4554d5a3aa8dc91190cf1cd919b9cf6fb148fcc";
+export { calculateOdds, canAttack, defenseBreakdown, planCombatResult } from "./combat.js?v=e4554d5a3aa8dc91190cf1cd919b9cf6fb148fcc";
+export { shouldCheckAxisObjectiveVictoryAtPhaseEnd } from "./phases.js?v=e4554d5a3aa8dc91190cf1cd919b9cf6fb148fcc";
+export { evaluateAlliedBreakthroughVictory, evaluateAxisObjectiveVictory, getObjectiveStatus, isAlliedBreakthroughMove } from "./victory.js?v=e4554d5a3aa8dc91190cf1cd919b9cf6fb148fcc";
 export {
   ENV_ACTION,
   ENV_EVENT,
@@ -24,4 +24,4 @@ export {
   restorePreviousState,
   stateHash,
   stateHashForState,
-} from "./environment.js?v=16ec5c1c0b9999875f5d6dfed861e5c8dba1bd36";
+} from "./environment.js?v=e4554d5a3aa8dc91190cf1cd919b9cf6fb148fcc";
