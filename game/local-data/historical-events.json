@@ -17,7 +17,7 @@
           "zh": "非洲装甲集团军司令部（Panzerarmee Afrika）",
           "en": "Headquarters, Panzerarmee Afrika"
         },
-        "portrait": "./local-assets/photos/rommel-portrait-1942.jpg?v=6a644862a44efa862d693def7dfce39ce4fec673",
+        "portrait": "./local-assets/photos/rommel-portrait-1942.jpg?v=16ec5c1c0b9999875f5d6dfed861e5c8dba1bd36",
         "portraitAlt": {
           "zh": "1942至1943年前后的埃尔温·隆美尔档案肖像",
           "en": "Archive portrait of Erwin Rommel, circa 1942–43"
@@ -48,7 +48,7 @@
           "zh": "英国第八集团军司令部",
           "en": "Eighth Army Headquarters"
         },
-        "portrait": "./local-assets/photos/montgomery-1942.jpg?v=6a644862a44efa862d693def7dfce39ce4fec673",
+        "portrait": "./local-assets/photos/montgomery-1942.jpg?v=16ec5c1c0b9999875f5d6dfed861e5c8dba1bd36",
         "portraitAlt": {
           "zh": "1942年北非战场上的伯纳德·蒙哥马利",
           "en": "Bernard Montgomery in North Africa, 1942"
@@ -110,7 +110,7 @@
       "media": [
         {
           "assetId": "IMG-AWM-011009-FIELD-WORKSHOP",
-          "src": "./local-assets/photos/axis-field-workshop-1941.jpg?v=6a644862a44efa862d693def7dfce39ce4fec673",
+          "src": "./local-assets/photos/axis-field-workshop-1941.jpg?v=16ec5c1c0b9999875f5d6dfed861e5c8dba1bd36",
           "altText": {
             "zh": "在利比亚被俘并摧毁后的德军野战维修场与车辆",
             "en": "A German field workshop and vehicles captured and destroyed by British forces in Libya"
@@ -239,7 +239,7 @@
       "media": [
         {
           "assetId": "IMG-BARCH-101I-784-0232-37A-BISMARCK",
-          "src": "./local-assets/photos/rommel-bismarck-1942.jpg?v=6a644862a44efa862d693def7dfce39ce4fec673",
+          "src": "./local-assets/photos/rommel-bismarck-1942.jpg?v=16ec5c1c0b9999875f5d6dfed861e5c8dba1bd36",
           "altText": {
             "zh": "隆美尔与格奥尔格·冯·俾斯麦的档案照片；界面红叉表示俾斯麦阵亡",
             "en": "Archive photograph of Rommel and Georg von Bismarck; a UI red cross marks Bismarck as killed"
@@ -261,7 +261,7 @@
         },
         {
           "assetId": "IMG-BARCH-101I-784-0203-14A-NEHRING",
-          "src": "./local-assets/photos/rommel-nehring-1942.jpg?v=6a644862a44efa862d693def7dfce39ce4fec673",
+          "src": "./local-assets/photos/rommel-nehring-1942.jpg?v=16ec5c1c0b9999875f5d6dfed861e5c8dba1bd36",
           "altText": {
             "zh": "拜尔莱因、隆美尔与瓦尔特·内林的档案照片；界面红叉表示内林负伤",
             "en": "Archive photograph of Bayerlein, Rommel and Walther Nehring; a UI red cross marks Nehring as wounded"
@@ -316,7 +316,7 @@
       "media": [
         {
           "assetId": "IMG-AWM-MED0175-WRECKED-LORRY",
-          "src": "./local-assets/photos/axis-wrecked-lorry-1942.jpg?v=6a644862a44efa862d693def7dfce39ce4fec673",
+          "src": "./local-assets/photos/axis-wrecked-lorry-1942.jpg?v=16ec5c1c0b9999875f5d6dfed861e5c8dba1bd36",
           "altText": {
             "zh": "西部沙漠中被英国皇家空军炸毁的德军卡车",
             "en": "A German lorry destroyed by an RAF bomb in the Western Desert"
@@ -369,7 +369,7 @@
       "media": [
         {
           "assetId": "IMG-BARCH-101I-785-0293-45-PANZER-III",
-          "src": "./local-assets/photos/panzer-iii-north-africa-1942.jpg?v=6a644862a44efa862d693def7dfce39ce4fec673",
+          "src": "./local-assets/photos/panzer-iii-north-africa-1942.jpg?v=16ec5c1c0b9999875f5d6dfed861e5c8dba1bd36",
           "altText": {
             "zh": "1942年6月北非沙漠中的德军三号坦克322号",
             "en": "German Panzer III number 322 in the North African desert, June 1942"

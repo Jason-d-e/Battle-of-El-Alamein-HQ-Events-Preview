@@ -1,8 +1,8 @@
-import { createHistoricalNarrativeModule } from "./historical-narrative.js?v=6a644862a44efa862d693def7dfce39ce4fec673";
+import { createHistoricalNarrativeModule } from "./historical-narrative.js?v=16ec5c1c0b9999875f5d6dfed861e5c8dba1bd36";
 import {
   toHeadquartersSurfaceModel,
   toTurnBriefingModel,
-} from "./historical-narrative-presenter.js?v=6a644862a44efa862d693def7dfce39ce4fec673";
+} from "./historical-narrative-presenter.js?v=16ec5c1c0b9999875f5d6dfed861e5c8dba1bd36";
 
 function normalizedLanguage(language) {
   return language === "en" ? "en" : "zh";

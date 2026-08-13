@@ -1,5 +1,5 @@
-import { neighborsOf } from "./board.js?v=6a644862a44efa862d693def7dfce39ce4fec673";
-import { unitById } from "./units.js?v=6a644862a44efa862d693def7dfce39ce4fec673";
+import { neighborsOf } from "./board.js?v=16ec5c1c0b9999875f5d6dfed861e5c8dba1bd36";
+import { unitById } from "./units.js?v=16ec5c1c0b9999875f5d6dfed861e5c8dba1bd36";
 
 /**
  * Checks whether one attacker can be assigned to attack one defender.

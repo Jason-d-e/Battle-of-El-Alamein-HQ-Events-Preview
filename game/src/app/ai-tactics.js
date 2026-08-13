@@ -8,7 +8,7 @@ import {
   generateLegalActions,
   getLegalRetreatPaths,
   unitById,
-} from "../core/index.js?v=6a644862a44efa862d693def7dfce39ce4fec673";
+} from "../core/index.js?v=16ec5c1c0b9999875f5d6dfed861e5c8dba1bd36";
 
 export const TACTICAL_REASON = Object.freeze({
   DIRECT_WIN: "direct_win",
