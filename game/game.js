@@ -36,44 +36,44 @@
     useCache: true,
   });
   const OPPOSITE_SIDE = { axis: "allied", allied: "axis" };
-  const coreRulesPromise = import("./src/core/index.js?v=e4554d5a3aa8dc91190cf1cd919b9cf6fb148fcc");
-  const phaseFlowPromise = import("./src/app/phase-flow.js?v=e4554d5a3aa8dc91190cf1cd919b9cf6fb148fcc");
-  const menuModeSelectionPromise = import("./src/app/game-mode-selection.js?v=e4554d5a3aa8dc91190cf1cd919b9cf6fb148fcc");
-  const mapZoomPromise = import("./src/app/map-zoom.js?v=e4554d5a3aa8dc91190cf1cd919b9cf6fb148fcc");
-  const mapZoomControlsPromise = import("./src/ui/map-zoom-controls.js?v=e4554d5a3aa8dc91190cf1cd919b9cf6fb148fcc");
+  const coreRulesPromise = import("./src/core/index.js?v=4339489a236e2c9b2654adb0eb658e461b44e31c");
+  const phaseFlowPromise = import("./src/app/phase-flow.js?v=4339489a236e2c9b2654adb0eb658e461b44e31c");
+  const menuModeSelectionPromise = import("./src/app/game-mode-selection.js?v=4339489a236e2c9b2654adb0eb658e461b44e31c");
+  const mapZoomPromise = import("./src/app/map-zoom.js?v=4339489a236e2c9b2654adb0eb658e461b44e31c");
+  const mapZoomControlsPromise = import("./src/ui/map-zoom-controls.js?v=4339489a236e2c9b2654adb0eb658e461b44e31c");
   const historicalNarrativePromise = HAS_HEADQUARTERS_EVENTS
-    ? import("./src/app/historical-narrative.js?v=e4554d5a3aa8dc91190cf1cd919b9cf6fb148fcc")
+    ? import("./src/app/historical-narrative.js?v=4339489a236e2c9b2654adb0eb658e461b44e31c")
     : Promise.resolve(null);
   const historicalNarrativeSessionPromise = HAS_HEADQUARTERS_EVENTS
-    ? import("./src/app/historical-narrative-session.js?v=e4554d5a3aa8dc91190cf1cd919b9cf6fb148fcc")
+    ? import("./src/app/historical-narrative-session.js?v=4339489a236e2c9b2654adb0eb658e461b44e31c")
     : Promise.resolve(null);
   const historicalNarrativeGameStatePromise = HAS_HEADQUARTERS_EVENTS
-    ? import("./src/app/historical-narrative-game-state.js?v=e4554d5a3aa8dc91190cf1cd919b9cf6fb148fcc")
+    ? import("./src/app/historical-narrative-game-state.js?v=4339489a236e2c9b2654adb0eb658e461b44e31c")
     : Promise.resolve(null);
   const headquartersSurfacePromise = HAS_HEADQUARTERS_EVENTS
-    ? import("./src/ui/headquarters-surface.js?v=e4554d5a3aa8dc91190cf1cd919b9cf6fb148fcc")
+    ? import("./src/ui/headquarters-surface.js?v=4339489a236e2c9b2654adb0eb658e461b44e31c")
     : Promise.resolve(null);
   const turnBriefingOverlayPromise = HAS_HEADQUARTERS_EVENTS
-    ? import("./src/ui/turn-briefing-overlay.js?v=e4554d5a3aa8dc91190cf1cd919b9cf6fb148fcc")
+    ? import("./src/ui/turn-briefing-overlay.js?v=4339489a236e2c9b2654adb0eb658e461b44e31c")
     : Promise.resolve(null);
-  const aiHeuristicsPromise = import("./src/app/ai-heuristics.js?v=e4554d5a3aa8dc91190cf1cd919b9cf6fb148fcc");
-  const aiPhaseSearchPromise = import("./src/app/ai-phase-search.js?v=e4554d5a3aa8dc91190cf1cd919b9cf6fb148fcc");
-  const aiTacticsPromise = import("./src/app/ai-tactics.js?v=e4554d5a3aa8dc91190cf1cd919b9cf6fb148fcc");
+  const aiHeuristicsPromise = import("./src/app/ai-heuristics.js?v=4339489a236e2c9b2654adb0eb658e461b44e31c");
+  const aiPhaseSearchPromise = import("./src/app/ai-phase-search.js?v=4339489a236e2c9b2654adb0eb658e461b44e31c");
+  const aiTacticsPromise = import("./src/app/ai-tactics.js?v=4339489a236e2c9b2654adb0eb658e461b44e31c");
   const aiAlphaBrowserPromise = PRODUCT_PROFILE.features.alphaRuntime
-    ? import("./src/app/ai-alpha-browser.js?v=e4554d5a3aa8dc91190cf1cd919b9cf6fb148fcc")
+    ? import("./src/app/ai-alpha-browser.js?v=4339489a236e2c9b2654adb0eb658e461b44e31c")
     : Promise.resolve(null);
   const aiAlphaPreviewPromise = PRODUCT_PROFILE.features.alphaRuntime
-    ? import("./src/app/ai-alpha-preview.js?v=e4554d5a3aa8dc91190cf1cd919b9cf6fb148fcc")
+    ? import("./src/app/ai-alpha-preview.js?v=4339489a236e2c9b2654adb0eb658e461b44e31c")
     : Promise.resolve(null);
-  const aiHumanDemonstrationPromise = import("./src/app/ai-alpha-human-demonstration.js?v=e4554d5a3aa8dc91190cf1cd919b9cf6fb148fcc");
-  const aiAlphaEnvironmentAdapterPromise = import("./src/app/ai-alpha-environment-adapter.js?v=e4554d5a3aa8dc91190cf1cd919b9cf6fb148fcc");
-  const aiAlphaTrainingPromise = import("./src/app/ai-alpha-training.js?v=e4554d5a3aa8dc91190cf1cd919b9cf6fb148fcc");
-  const alphaFingerprintPromise = import("../shared/wargame-alpha/fingerprint.js?v=e4554d5a3aa8dc91190cf1cd919b9cf6fb148fcc");
+  const aiHumanDemonstrationPromise = import("./src/app/ai-alpha-human-demonstration.js?v=4339489a236e2c9b2654adb0eb658e461b44e31c");
+  const aiAlphaEnvironmentAdapterPromise = import("./src/app/ai-alpha-environment-adapter.js?v=4339489a236e2c9b2654adb0eb658e461b44e31c");
+  const aiAlphaTrainingPromise = import("./src/app/ai-alpha-training.js?v=4339489a236e2c9b2654adb0eb658e461b44e31c");
+  const alphaFingerprintPromise = import("../shared/wargame-alpha/fingerprint.js?v=4339489a236e2c9b2654adb0eb658e461b44e31c");
   const onlineModulesPromise = PRODUCT_PROFILE.features.onlineFriendMatch
     ? Promise.all([
-      import("./src/app/supabase-online-transport.js?v=e4554d5a3aa8dc91190cf1cd919b9cf6fb148fcc"),
-      import("./src/app/online-game-bridge.js?v=e4554d5a3aa8dc91190cf1cd919b9cf6fb148fcc"),
-      import("./src/ui/online-multiplayer-panel.js?v=e4554d5a3aa8dc91190cf1cd919b9cf6fb148fcc"),
+      import("./src/app/supabase-online-transport.js?v=4339489a236e2c9b2654adb0eb658e461b44e31c"),
+      import("./src/app/online-game-bridge.js?v=4339489a236e2c9b2654adb0eb658e461b44e31c"),
+      import("./src/ui/online-multiplayer-panel.js?v=4339489a236e2c9b2654adb0eb658e461b44e31c"),
     ]).then(([transport, bridge, panel]) => ({ transport, bridge, panel }))
     : Promise.resolve(null);
   const HIGHLIGHT = {
@@ -1837,14 +1837,14 @@
         aiAlphaTrainingPromise,
         alphaFingerprintPromise,
         onlineModulesPromise,
-        fetchJson("local-data/scenario.json?v=e4554d5a3aa8dc91190cf1cd919b9cf6fb148fcc"),
-        fetchJson("local-data/rules.json?v=e4554d5a3aa8dc91190cf1cd919b9cf6fb148fcc"),
+        fetchJson("local-data/scenario.json?v=4339489a236e2c9b2654adb0eb658e461b44e31c"),
+        fetchJson("local-data/rules.json?v=4339489a236e2c9b2654adb0eb658e461b44e31c"),
         HAS_HEADQUARTERS_EVENTS
-          ? fetchJson("local-data/historical-events.json?v=e4554d5a3aa8dc91190cf1cd919b9cf6fb148fcc")
+          ? fetchJson("local-data/historical-events.json?v=4339489a236e2c9b2654adb0eb658e461b44e31c")
           : Promise.resolve(null),
-        fetchJson("local-data/ai-weights-expert.json?v=e4554d5a3aa8dc91190cf1cd919b9cf6fb148fcc").catch(() => null),
+        fetchJson("local-data/ai-weights-expert.json?v=4339489a236e2c9b2654adb0eb658e461b44e31c").catch(() => null),
         PRODUCT_PROFILE.features.alphaRuntime
-          ? fetchOptionalJson("local-data/alpha-model.json?v=e4554d5a3aa8dc91190cf1cd919b9cf6fb148fcc")
+          ? fetchOptionalJson("local-data/alpha-model.json?v=4339489a236e2c9b2654adb0eb658e461b44e31c")
           : Promise.resolve({ status: "missing", value: null, reason: "profile_disabled" }),
       ]);
       app.core = core;
@@ -1860,7 +1860,9 @@
         ? app.mapZoom.DEFAULT_MAP_ZOOM
         : app.mapZoomPreference;
       if (HAS_HEADQUARTERS_EVENTS) {
-        app.historicalNarrativeModule = historicalNarrativeModule.createHistoricalNarrativeModule(historicalNarrativeCatalog);
+        app.historicalNarrativeModule = historicalNarrativeModule.createHistoricalNarrativeModule(
+          historicalNarrativeCatalog,
+        );
         app.historicalNarrativeSessionModule = historicalNarrativeSessionModule;
         app.historicalNarrativeCatalog = historicalNarrativeCatalog;
         app.historicalNarrativeEffectReducer = historicalNarrativeModule.reduceHistoricalNarrativeEffects;

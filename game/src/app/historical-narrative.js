@@ -7,12 +7,19 @@ const SUPPORTED_EFFECTS = new Set(["none", "set-game-flag"]);
 const SUPPORTED_IMPACTS = new Set(["flavor", "gameplay"]);
 const SUPPORTED_DISPLAY_POLICIES = new Set(["hidden", "image_only"]);
 const SUPPORTED_DOCUMENT_KINDS = new Set(["letter", "telegram", "field-remark"]);
+const HQ_NONCOMMERCIAL_MEDIA_SCOPE = "hq_noncommercial_experiment";
+const HQ_NONCOMMERCIAL_RELEASE_STATE = "included_in_hq_noncommercial_preview";
+const DOCUMENT_BACKGROUND_PRESENTATION = "document_background";
 const LOCALIZED_VALUE_FIELDS = new Set(SUPPORTED_LANGUAGES);
 const RUNTIME_MEDIA_FIELDS = new Set([
   "assetId",
   "src",
   "altText",
   "displayPolicy",
+  "presentationMode",
+  "imageFit",
+  "mediaScope",
+  "releaseState",
   "requiredCredit",
   "overlay",
   "subject",
@@ -47,6 +54,10 @@ function assertLocalizedText(value, label) {
     if (typeof localized.body !== "string" || !localized.body.trim()) {
       throw new Error(`${label}.${language}.body must be a non-empty string`);
     }
+    if (localized.signature !== undefined
+      && (typeof localized.signature !== "string" || !localized.signature.trim())) {
+      throw new Error(`${label}.${language}.signature must be a non-empty string when provided`);
+    }
   }
 }
 
@@ -78,7 +89,33 @@ function assertMedia(media, entryId, mediaByAssetId) {
   if (typeof media.assetId !== "string" || !/^IMG-[A-Z0-9-]+$/.test(media.assetId)) {
     throw new Error(`Entry ${entryId} media needs a stable assetId`);
   }
-  if (typeof media.src !== "string" || !media.src.startsWith("./local-assets/")) {
+  const isHqNoncommercialMedia = media.mediaScope !== undefined
+    || media.releaseState !== undefined
+    || media.presentationMode !== undefined
+    || media.imageFit !== undefined;
+  if (isHqNoncommercialMedia) {
+    if (media.mediaScope !== HQ_NONCOMMERCIAL_MEDIA_SCOPE) {
+      throw new Error(`Entry ${entryId} media ${media.assetId} has invalid HQ experiment mediaScope`);
+    }
+    if (media.releaseState !== HQ_NONCOMMERCIAL_RELEASE_STATE) {
+      throw new Error(`Entry ${entryId} media ${media.assetId} must remain limited to the HQ noncommercial preview`);
+    }
+    if (media.presentationMode !== DOCUMENT_BACKGROUND_PRESENTATION) {
+      throw new Error(`Entry ${entryId} media ${media.assetId} has invalid HQ experiment presentationMode`);
+    }
+    if (media.imageFit !== "contain") {
+      throw new Error(`Entry ${entryId} media ${media.assetId} imageFit must be contain for full-image display`);
+    }
+    if (media.displayPolicy !== "image_only") {
+      throw new Error(`Entry ${entryId} media ${media.assetId} must use image_only displayPolicy`);
+    }
+    if (media.requiredCredit !== undefined) {
+      throw new Error(`Entry ${entryId} media ${media.assetId} must not fabricate verified requiredCredit`);
+    }
+    if (typeof media.src !== "string" || !media.src.startsWith("./local-assets/photos/")) {
+      throw new Error(`Entry ${entryId} media ${media.assetId} needs an HQ local-asset source path`);
+    }
+  } else if (typeof media.src !== "string" || !media.src.startsWith("./local-assets/")) {
     throw new Error(`Entry ${entryId} media ${media.assetId} needs a local source path`);
   }
   const previousSrc = mediaByAssetId.get(media.assetId);
@@ -91,6 +128,7 @@ function assertMedia(media, entryId, mediaByAssetId) {
     throw new Error(`Entry ${entryId} media ${media.assetId} has unsupported displayPolicy ${media.displayPolicy}`);
   }
   assertLocalizedValue(media.altText, `Entry ${entryId} media ${media.assetId} altText`);
+  if (isHqNoncommercialMedia) return;
   const requiredCredit = media.requiredCredit;
   if (!requiredCredit || requiredCredit.status !== "verified") {
     throw new Error(`Entry ${entryId} media ${media.assetId} requiredCredit must be verified`);
@@ -229,7 +267,18 @@ function validateCatalog(catalog) {
       throw new Error(`Entry ${entry.id} flagsAll must be an array`);
     }
     assertLocalizedText(entry.content, `Entry ${entry.id}`);
-    for (const media of entry.media ?? []) assertMedia(media, entry.id, mediaByAssetId);
+    const localizedSignatures = SUPPORTED_LANGUAGES.map((language) => entry.content[language].signature);
+    if (localizedSignatures.some((signature) => signature !== undefined)) {
+      if (!localizedSignatures.every((signature) => typeof signature === "string" && signature.trim())) {
+        throw new Error(`Entry ${entry.id} signature must be localized in every supported language`);
+      }
+      if (entry.surface !== "headquarters" || entry.section !== "letters" || entry.document === undefined) {
+        throw new Error(`Entry ${entry.id} signature requires a headquarters document in the letters section`);
+      }
+    }
+    for (const media of entry.media ?? []) {
+      assertMedia(media, entry.id, mediaByAssetId);
+    }
 
     if (entry.surface === "headquarters") {
       if (!HEADQUARTERS_SECTIONS.includes(entry.section)) {
@@ -273,6 +322,7 @@ function localizeEntry(entry, language, state) {
     title: content.title,
     eyebrow: content.eyebrow ?? "",
     body: content.body,
+    ...(content.signature ? { signature: content.signature } : {}),
     media: entry.media ? cloneJson(entry.media) : null,
     source: entry.source ? cloneJson(entry.source) : null,
     document: entry.document ? cloneJson(entry.document) : null,

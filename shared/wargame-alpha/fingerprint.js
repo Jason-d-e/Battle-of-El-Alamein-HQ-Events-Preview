@@ -1,4 +1,4 @@
-import { canonicalSerialize } from "./environment-contract.js?v=e4554d5a3aa8dc91190cf1cd919b9cf6fb148fcc";
+import { canonicalSerialize } from "./environment-contract.js?v=4339489a236e2c9b2654adb0eb658e461b44e31c";
 
 const SHA256_INITIAL_STATE = Object.freeze([
   0x6a09e667, 0xbb67ae85, 0x3c6ef372, 0xa54ff53a,

@@ -1,6 +1,6 @@
-import { neighborsOf } from "./board.js?v=e4554d5a3aa8dc91190cf1cd919b9cf6fb148fcc";
-import { movementAllowance } from "./movement.js?v=e4554d5a3aa8dc91190cf1cd919b9cf6fb148fcc";
-import { liveUnitAt, liveUnits } from "./units.js?v=e4554d5a3aa8dc91190cf1cd919b9cf6fb148fcc";
+import { neighborsOf } from "./board.js?v=4339489a236e2c9b2654adb0eb658e461b44e31c";
+import { movementAllowance } from "./movement.js?v=4339489a236e2c9b2654adb0eb658e461b44e31c";
+import { liveUnitAt, liveUnits } from "./units.js?v=4339489a236e2c9b2654adb0eb658e461b44e31c";
 
 const EL_ALAMEIN_HEX_ID = "c12r03";
 

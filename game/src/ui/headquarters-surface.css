@@ -3,7 +3,7 @@ html[data-product-profile="hq-events-preview"] .menu-view {
   padding: 24px;
   background:
     linear-gradient(90deg, rgba(19, 25, 18, 0.9), rgba(41, 39, 27, 0.5)),
-    url("../../local-assets/photos/rommel-campaign.png?v=e4554d5a3aa8dc91190cf1cd919b9cf6fb148fcc") center / cover;
+    url("../../local-assets/photos/rommel-campaign.png?v=4339489a236e2c9b2654adb0eb658e461b44e31c") center / cover;
 }
 
 .headquarters-host {
@@ -314,6 +314,7 @@ html[data-product-profile="hq-events-preview"] .menu-view {
   min-height: 100%;
   padding: clamp(22px, 3vw, 42px);
   position: relative;
+  isolation: isolate;
   color: #28281f;
   border: 1px solid #b8a778;
   background:
@@ -342,6 +343,10 @@ html[data-product-profile="hq-events-preview"] .menu-view {
   font-family: Georgia, "Times New Roman", serif;
 }
 
+.headquarters-document--telegram {
+  font-family: Georgia, "Times New Roman", serif;
+}
+
 .headquarters-document-title {
   max-width: 80%;
   margin: 0 0 8px;
@@ -367,6 +372,75 @@ html[data-product-profile="hq-events-preview"] .menu-view {
   max-width: 72ch;
   margin: 16px 0;
   font: 16px/1.75 Georgia, "Times New Roman", serif;
+}
+
+.headquarters-document-copy {
+  position: relative;
+  z-index: 2;
+}
+
+.headquarters-document-signature {
+  margin: 30px 4% 4px 0;
+  font: italic 700 17px/1.5 Georgia, "Times New Roman", serif;
+  text-align: right;
+}
+
+.headquarters-document[data-presentation-mode="document_background"] {
+  min-height: max(100%, 580px);
+  padding: 0;
+  display: grid;
+  grid-template-columns: minmax(250px, 38%) minmax(0, 1fr);
+  grid-template-areas: "copy portrait";
+  overflow: hidden;
+  background: #f7edce;
+}
+
+.headquarters-document[data-presentation-mode="document_background"] .headquarters-document-copy {
+  grid-area: copy;
+  min-height: 580px;
+  padding: clamp(28px, 3vw, 42px) clamp(22px, 2.4vw, 34px) 28px;
+  background: rgba(247, 237, 206, 0.98);
+  border-right: 1px solid rgba(91, 82, 51, 0.32);
+}
+
+.headquarters-document[data-presentation-mode="document_background"] .headquarters-document-title {
+  max-width: none;
+}
+
+.headquarters-document-portrait {
+  min-width: 0;
+  height: 580px;
+  min-height: 580px;
+  position: relative;
+  grid-area: portrait;
+  overflow: hidden;
+  background: #8b805b;
+}
+
+.headquarters-document-background-image,
+.headquarters-document-background-scrim {
+  position: absolute;
+  inset: 0;
+}
+
+.headquarters-document-background-image {
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  object-position: center top;
+  opacity: 0.72;
+  filter: grayscale(0.72) sepia(0.22) contrast(1.04);
+  pointer-events: none;
+}
+
+.headquarters-document-background-image[data-image-fit="contain"] {
+  object-fit: contain;
+}
+
+.headquarters-document-background-scrim {
+  z-index: 1;
+  background: linear-gradient(135deg, rgba(247, 237, 206, 0.05), rgba(88, 77, 44, 0.08));
+  pointer-events: none;
 }
 
 .headquarters-document-figure {
@@ -515,6 +589,30 @@ html[data-product-profile="hq-events-preview"] .menu-view {
   .headquarters-document {
     padding: 22px 18px;
     background: #f8efcf;
+  }
+
+  .headquarters-document[data-presentation-mode="document_background"] {
+    min-height: 650px;
+    padding: 0;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas:
+      "portrait"
+      "copy";
+    background: #f7edce;
+  }
+
+  .headquarters-document[data-presentation-mode="document_background"] .headquarters-document-copy {
+    min-height: 0;
+    padding: 28px 18px;
+    border-top: 1px solid rgba(91, 82, 51, 0.32);
+    border-right: 0;
+  }
+
+  .headquarters-document[data-presentation-mode="document_background"] .headquarters-document-portrait {
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    aspect-ratio: 1081 / 1287;
   }
 
   .headquarters-document-stamp {

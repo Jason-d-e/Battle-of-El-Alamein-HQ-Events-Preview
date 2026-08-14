@@ -17,7 +17,7 @@
           "zh": "非洲装甲集团军司令部（Panzerarmee Afrika）",
           "en": "Headquarters, Panzerarmee Afrika"
         },
-        "portrait": "./local-assets/photos/rommel-portrait-1942.jpg?v=e4554d5a3aa8dc91190cf1cd919b9cf6fb148fcc",
+        "portrait": "./local-assets/photos/rommel-portrait-1942.jpg?v=4339489a236e2c9b2654adb0eb658e461b44e31c",
         "portraitAlt": {
           "zh": "1942至1943年前后的埃尔温·隆美尔档案肖像",
           "en": "Archive portrait of Erwin Rommel, circa 1942–43"
@@ -48,7 +48,7 @@
           "zh": "英国第八集团军司令部",
           "en": "Eighth Army Headquarters"
         },
-        "portrait": "./local-assets/photos/montgomery-1942.jpg?v=e4554d5a3aa8dc91190cf1cd919b9cf6fb148fcc",
+        "portrait": "./local-assets/photos/montgomery-1942.jpg?v=4339489a236e2c9b2654adb0eb658e461b44e31c",
         "portraitAlt": {
           "zh": "1942年北非战场上的伯纳德·蒙哥马利",
           "en": "Bernard Montgomery in North Africa, 1942"
@@ -110,7 +110,7 @@
       "media": [
         {
           "assetId": "IMG-AWM-011009-FIELD-WORKSHOP",
-          "src": "./local-assets/photos/axis-field-workshop-1941.jpg?v=e4554d5a3aa8dc91190cf1cd919b9cf6fb148fcc",
+          "src": "./local-assets/photos/axis-field-workshop-1941.jpg?v=4339489a236e2c9b2654adb0eb658e461b44e31c",
           "altText": {
             "zh": "在利比亚被俘并摧毁后的德军野战维修场与车辆",
             "en": "A German field workshop and vehicles captured and destroyed by British forces in Libya"
@@ -214,6 +214,67 @@
       }
     },
     {
+      "id": "axis-turn-1-rommel-promotion-telegram",
+      "surface": "headquarters",
+      "section": "letters",
+      "side": "axis",
+      "impact": "flavor",
+      "unlock": {
+        "turn": 1,
+        "date": "1942-08-31",
+        "timing": "turn-start"
+      },
+      "content": {
+        "zh": {
+          "title": "致隆美尔陆军元帅：",
+          "body": "为感谢并表彰您的指挥、您本人对战役胜负起决定作用的投入，并为表彰在您指挥下于非洲战场作战之部队的英勇功绩，我自今日起晋升您为陆军元帅。",
+          "signature": "阿道夫·希特勒"
+        },
+        "en": {
+          "title": "To Field Marshal Rommel:",
+          "body": "In gratitude and recognition of your leadership, of the commitment you personally made that proved decisive to the outcome of the campaign, and of the valour of the troops fighting under your command in Africa, I hereby promote you to Field Marshal, effective today.",
+          "signature": "Adolf Hitler"
+        }
+      },
+      "document": {
+        "kind": "telegram",
+        "date": "1942-06-22",
+        "timelineLabel": {
+          "zh": "晋升电报",
+          "en": "Promotion telegram"
+        },
+        "originalLanguage": "de",
+        "originalTextVerified": false,
+        "translationBasis": {
+          "zh": "德文措辞据1942年6月23日同时代报纸刊载的一份据称电报转录；未查验原始电报档案。中文为用户提供译文。",
+          "en": "The German wording comes from a contemporaneous newspaper transcription of a purported telegram published on 23 June 1942; no original telegram record was inspected. The Chinese is a user-provided translation and the English an editorial translation."
+        }
+      },
+      "media": [
+        {
+          "assetId": "IMG-HQ-ROMMEL-PROMOTION-TELEGRAM",
+          "src": "./local-assets/photos/rommel-promotion-field-marshal-1942.png?v=4339489a236e2c9b2654adb0eb658e461b44e31c",
+          "altText": {
+            "zh": "埃尔温·隆美尔身着制服、手持元帅杖的肖像",
+            "en": "Portrait of Erwin Rommel in uniform holding a field marshal’s baton"
+          },
+          "displayPolicy": "image_only",
+          "presentationMode": "document_background",
+          "imageFit": "contain",
+          "mediaScope": "hq_noncommercial_experiment",
+          "releaseState": "included_in_hq_noncommercial_preview"
+        }
+      ],
+      "source": {
+        "url": "https://img.sub.uni-hamburg.de/kitodo/PPN1699277745_19420623MO/PDF/PPN1699277745_19420623MO.pdf",
+        "crossCheckUrl": "https://img.sub.uni-hamburg.de/kitodo/PPN1012344304_19420623/PDF/PPN1012344304_19420623.pdf",
+        "citation": {
+          "zh": "《Hamburger Fremdenblatt》，1942年6月23日，第1页所刊DNB德文转录；以同日另一份报纸转录交叉核对。两者均非原始电报档案。",
+          "en": "DNB German transcription printed on page 1 of Hamburger Fremdenblatt, 23 June 1942, cross-checked against a second newspaper transcription from the same date. Neither is the original telegram record."
+        }
+      }
+    },
+    {
       "id": "axis-turn-2-command-losses",
       "surface": "headquarters",
       "section": "events",
@@ -239,7 +300,7 @@
       "media": [
         {
           "assetId": "IMG-BARCH-101I-784-0232-37A-BISMARCK",
-          "src": "./local-assets/photos/rommel-bismarck-1942.jpg?v=e4554d5a3aa8dc91190cf1cd919b9cf6fb148fcc",
+          "src": "./local-assets/photos/rommel-bismarck-1942.jpg?v=4339489a236e2c9b2654adb0eb658e461b44e31c",
           "altText": {
             "zh": "隆美尔与格奥尔格·冯·俾斯麦的档案照片；界面红叉表示俾斯麦阵亡",
             "en": "Archive photograph of Rommel and Georg von Bismarck; a UI red cross marks Bismarck as killed"
@@ -261,7 +322,7 @@
         },
         {
           "assetId": "IMG-BARCH-101I-784-0203-14A-NEHRING",
-          "src": "./local-assets/photos/rommel-nehring-1942.jpg?v=e4554d5a3aa8dc91190cf1cd919b9cf6fb148fcc",
+          "src": "./local-assets/photos/rommel-nehring-1942.jpg?v=4339489a236e2c9b2654adb0eb658e461b44e31c",
           "altText": {
             "zh": "拜尔莱因、隆美尔与瓦尔特·内林的档案照片；界面红叉表示内林负伤",
             "en": "Archive photograph of Bayerlein, Rommel and Walther Nehring; a UI red cross marks Nehring as wounded"
@@ -316,7 +377,7 @@
       "media": [
         {
           "assetId": "IMG-AWM-MED0175-WRECKED-LORRY",
-          "src": "./local-assets/photos/axis-wrecked-lorry-1942.jpg?v=e4554d5a3aa8dc91190cf1cd919b9cf6fb148fcc",
+          "src": "./local-assets/photos/axis-wrecked-lorry-1942.jpg?v=4339489a236e2c9b2654adb0eb658e461b44e31c",
           "altText": {
             "zh": "西部沙漠中被英国皇家空军炸毁的德军卡车",
             "en": "A German lorry destroyed by an RAF bomb in the Western Desert"
@@ -369,7 +430,7 @@
       "media": [
         {
           "assetId": "IMG-BARCH-101I-785-0293-45-PANZER-III",
-          "src": "./local-assets/photos/panzer-iii-north-africa-1942.jpg?v=e4554d5a3aa8dc91190cf1cd919b9cf6fb148fcc",
+          "src": "./local-assets/photos/panzer-iii-north-africa-1942.jpg?v=4339489a236e2c9b2654adb0eb658e461b44e31c",
           "altText": {
             "zh": "1942年6月北非沙漠中的德军三号坦克322号",
             "en": "German Panzer III number 322 in the North African desert, June 1942"

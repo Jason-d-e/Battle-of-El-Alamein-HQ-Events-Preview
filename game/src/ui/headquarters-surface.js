@@ -335,7 +335,17 @@ export function createHeadquartersSurface({
       return;
     }
 
-    const documentStyle = section === "letters" ? "letter" : "report";
+    const images = Array.isArray(entry.images) && entry.images.length
+      ? entry.images
+      : entry.image?.src
+        ? [entry.image]
+        : [];
+    const presentationMode = images.find((image) => image.presentationMode)?.presentationMode || "inline";
+    const documentStyle = entry.documentKind === "telegram"
+      ? "telegram"
+      : section === "letters"
+        ? "letter"
+        : "report";
     const article = makeElement(
       documentRef,
       "article",
@@ -343,6 +353,7 @@ export function createHeadquartersSurface({
     );
     article.dataset.documentStyle = documentStyle;
     article.dataset.entryId = entry.id;
+    article.dataset.presentationMode = presentationMode;
     if (documentStyle === "report") {
       article.append(makeElement(
         documentRef,
@@ -351,25 +362,47 @@ export function createHeadquartersSurface({
         model.labels.reportStamp || "",
       ));
     }
+    const copy = makeElement(documentRef, "div", "headquarters-document-copy");
     const title = makeElement(documentRef, "h3", "headquarters-document-title", entry.title || "");
     title.dataset.detailEntryId = entry.id;
     title.setAttribute("tabindex", "-1");
     detailFocusTarget = title;
-    article.append(title);
-    appendOptionalText(article, "headquarters-document-date", entry.date);
+    copy.append(title);
+    appendOptionalText(copy, "headquarters-document-date", entry.date);
     if (!entry.summaryDerivedFromBody) {
-      appendOptionalText(article, "headquarters-document-summary", entry.summary);
+      appendOptionalText(copy, "headquarters-document-summary", entry.summary);
     }
     for (const paragraph of Array.isArray(entry.body) ? entry.body : []) {
-      appendOptionalText(article, "headquarters-document-paragraph", paragraph);
+      appendOptionalText(copy, "headquarters-document-paragraph", paragraph);
     }
+    appendOptionalText(copy, "headquarters-document-signature", entry.signature);
+    article.append(copy);
 
-    const images = Array.isArray(entry.images) && entry.images.length
-      ? entry.images
-      : entry.image?.src
-        ? [entry.image]
-        : [];
     for (const imageModel of images) {
+      if (imageModel.presentationMode === "document_background") {
+        const portrait = makeElement(
+          documentRef,
+          "div",
+          "headquarters-document-portrait",
+        );
+        const scrim = makeElement(
+          documentRef,
+          "span",
+          "headquarters-document-background-scrim",
+        );
+        scrim.setAttribute("aria-hidden", "true");
+        const image = makeElement(
+          documentRef,
+          "img",
+          "headquarters-document-background-image",
+        );
+        image.src = imageModel.src;
+        image.alt = imageModel.alt || "";
+        image.dataset.imageFit = imageModel.imageFit || "";
+        portrait.append(scrim, image);
+        article.append(portrait);
+        continue;
+      }
       const figure = makeElement(documentRef, "figure", "headquarters-document-figure");
       figure.dataset.overlay = imageModel.overlay || "none";
       const image = makeElement(documentRef, "img", "headquarters-document-image");

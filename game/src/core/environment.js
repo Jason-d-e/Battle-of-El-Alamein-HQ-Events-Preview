@@ -1,10 +1,10 @@
-import { createBoard, neighborsOf } from "./board.js?v=e4554d5a3aa8dc91190cf1cd919b9cf6fb148fcc";
-import { calculateOdds, canAttack, planCombatResult } from "./combat.js?v=e4554d5a3aa8dc91190cf1cd919b9cf6fb148fcc";
-import { getReachableHexes } from "./movement.js?v=e4554d5a3aa8dc91190cf1cd919b9cf6fb148fcc";
-import { getLegalRetreatPaths } from "./retreat.js?v=e4554d5a3aa8dc91190cf1cd919b9cf6fb148fcc";
-import { liveUnitAt, liveUnits, unitById } from "./units.js?v=e4554d5a3aa8dc91190cf1cd919b9cf6fb148fcc";
-import { evaluateAlliedBreakthroughVictory, evaluateAxisObjectiveVictory, getObjectiveStatus, isAlliedBreakthroughMove } from "./victory.js?v=e4554d5a3aa8dc91190cf1cd919b9cf6fb148fcc";
-import { shouldCheckAxisObjectiveVictoryAtPhaseEnd } from "./phases.js?v=e4554d5a3aa8dc91190cf1cd919b9cf6fb148fcc";
+import { createBoard, neighborsOf } from "./board.js?v=4339489a236e2c9b2654adb0eb658e461b44e31c";
+import { calculateOdds, canAttack, planCombatResult } from "./combat.js?v=4339489a236e2c9b2654adb0eb658e461b44e31c";
+import { getReachableHexes } from "./movement.js?v=4339489a236e2c9b2654adb0eb658e461b44e31c";
+import { getLegalRetreatPaths } from "./retreat.js?v=4339489a236e2c9b2654adb0eb658e461b44e31c";
+import { liveUnitAt, liveUnits, unitById } from "./units.js?v=4339489a236e2c9b2654adb0eb658e461b44e31c";
+import { evaluateAlliedBreakthroughVictory, evaluateAxisObjectiveVictory, getObjectiveStatus, isAlliedBreakthroughMove } from "./victory.js?v=4339489a236e2c9b2654adb0eb658e461b44e31c";
+import { shouldCheckAxisObjectiveVictoryAtPhaseEnd } from "./phases.js?v=4339489a236e2c9b2654adb0eb658e461b44e31c";
 
 export const ENV_ACTION = Object.freeze({
   MOVE_UNIT: "MOVE_UNIT",

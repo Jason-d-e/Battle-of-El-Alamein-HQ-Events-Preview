@@ -7,13 +7,13 @@ import {
   currentPhase,
   generateLegalActions,
   stateHash,
-} from "../core/environment.js?v=e4554d5a3aa8dc91190cf1cd919b9cf6fb148fcc";
+} from "../core/environment.js?v=4339489a236e2c9b2654adb0eb658e461b44e31c";
 import {
   ENVIRONMENT_CONTRACT_VERSION,
   NODE_KIND,
   canonicalSerialize,
-} from "../../../shared/wargame-alpha/environment-contract.js?v=e4554d5a3aa8dc91190cf1cd919b9cf6fb148fcc";
-import { alphaModelEnvironmentFingerprint } from "./ai-alpha-model.js?v=e4554d5a3aa8dc91190cf1cd919b9cf6fb148fcc";
+} from "../../../shared/wargame-alpha/environment-contract.js?v=4339489a236e2c9b2654adb0eb658e461b44e31c";
+import { alphaModelEnvironmentFingerprint } from "./ai-alpha-model.js?v=4339489a236e2c9b2654adb0eb658e461b44e31c";
 
 export const EL_ALAMEIN_ALPHA_ENVIRONMENT_ADAPTER_FINGERPRINT =
   "el-alamein-alpha-environment-adapter/semantic-v2";

@@ -65,6 +65,8 @@ function presentMedia(media, language) {
     src: media.src,
     alt: localized(media.altText, language),
     displayPolicy: "image_only",
+    ...(media.presentationMode ? { presentationMode: media.presentationMode } : {}),
+    ...(media.imageFit ? { imageFit: media.imageFit } : {}),
     overlay: media.overlay ?? null,
     subject: media.subject ?? "",
   };
@@ -84,6 +86,8 @@ function presentEntry(entry, language) {
     summary: summarize(entry.body),
     summaryDerivedFromBody: true,
     body: paragraphList(entry.body),
+    ...(entry.signature ? { signature: entry.signature } : {}),
+    ...(entry.document?.kind === "telegram" ? { documentKind: "telegram" } : {}),
     unread: Boolean(entry.isNew),
     images,
     image: images[0] ?? null,

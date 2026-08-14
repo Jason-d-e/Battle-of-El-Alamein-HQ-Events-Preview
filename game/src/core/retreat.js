@@ -1,7 +1,7 @@
-import { hexDistance, neighborsOf } from "./board.js?v=e4554d5a3aa8dc91190cf1cd919b9cf6fb148fcc";
-import { terrainRule } from "./terrain.js?v=e4554d5a3aa8dc91190cf1cd919b9cf6fb148fcc";
-import { isEnemyZoc } from "./zoc.js?v=e4554d5a3aa8dc91190cf1cd919b9cf6fb148fcc";
-import { liveUnitAt, resolveUnit } from "./units.js?v=e4554d5a3aa8dc91190cf1cd919b9cf6fb148fcc";
+import { hexDistance, neighborsOf } from "./board.js?v=4339489a236e2c9b2654adb0eb658e461b44e31c";
+import { terrainRule } from "./terrain.js?v=4339489a236e2c9b2654adb0eb658e461b44e31c";
+import { isEnemyZoc } from "./zoc.js?v=4339489a236e2c9b2654adb0eb658e461b44e31c";
+import { liveUnitAt, resolveUnit } from "./units.js?v=4339489a236e2c9b2654adb0eb658e461b44e31c";
 
 /**
  * Finds legal retreat destinations and the paths used to reach them.
